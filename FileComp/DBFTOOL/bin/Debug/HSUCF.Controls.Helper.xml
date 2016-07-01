@@ -1,0 +1,1067 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HSUCF.Controls.Helper</name>
+    </assembly>
+    <members>
+        <member name="T:HSUCF.Controls.Helper.FilletStyleEditor">
+            <summary>
+            圆角样式设计期编辑器
+            </summary>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FilletStyleEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            编辑属性值
+            </summary>
+            <param name="context"></param>
+            <param name="provider"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FilletStyleEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            获取编辑框样式
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FilletStyleEditor.GetPaintValueSupported(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            是否允许用户自行绘制控件值
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FilletStyleEditor.PaintValue(System.Drawing.Design.PaintValueEventArgs)">
+            <summary>
+            在属性框中绘制控件样式
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:HSUCF.Controls.Helper.FilletStyleEditor.FilletStyleUI">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FilletStyleEditor.FilletStyleUI.#ctor(HSUCF.Controls.Helper.FilletStyleEditor)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FilletStyleEditor.FilletStyleUI.InitializeComponent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FilletStyleEditor.FilletStyleUI.End">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FilletStyleEditor.FilletStyleUI.Start(System.Windows.Forms.Design.IWindowsFormsEditorService,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="edSvc"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FilletStyleEditor.FilletStyleUI.Teardown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FilletStyleEditor.FilletStyleUI.GetStyle">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FilletStyleEditor.FilletStyleUI.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FilletStyleEditor.FilletStyleUI.OnLostFocus(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FilletStyleEditor.FilletStyleUI.btn_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FilletStyleEditor.FilletStyleUI.btnOK_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FilletStyleEditor.FilletStyleUI.btnCancel_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.FilletStyleEditor.FilletStyleUI.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HSUCF.Controls.Helper.FilletStyleEditor.FilletStyleUI.ContainerPlaceholder">
+            <summary>
+            按钮控件
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.FilletStyleEditor.FilletStyleUI.ContainerPlaceholder.Checked">
+            <summary>
+            是否选中
+            </summary>
+        </member>
+        <member name="T:HSUCF.Controls.Helper.FilletStyle">
+            <summary>
+            圆角样式
+            </summary>
+        </member>
+        <member name="F:HSUCF.Controls.Helper.FilletStyle.None">
+            <summary>
+            无圆角
+            </summary>
+        </member>
+        <member name="F:HSUCF.Controls.Helper.FilletStyle.LeftTop">
+            <summary>
+            左上角圆角，可与其他三个角的圆角同时设置
+            </summary>
+        </member>
+        <member name="F:HSUCF.Controls.Helper.FilletStyle.LeftBottom">
+            <summary>
+            左下角圆角，可与其他三个角的圆角同时设置
+            </summary>
+        </member>
+        <member name="F:HSUCF.Controls.Helper.FilletStyle.RightTop">
+            <summary>
+            右上角圆角，可与其他三个角的圆角同时设置
+            </summary>
+        </member>
+        <member name="F:HSUCF.Controls.Helper.FilletStyle.RightBottom">
+            <summary>
+            右下角圆角，可与其他三个角的圆角同时设置
+            </summary>
+        </member>
+        <member name="F:HSUCF.Controls.Helper.FilletStyle.EllipseTop">
+            <summary>
+            上半圆，只能与下半圆同时设置
+            </summary>
+        </member>
+        <member name="F:HSUCF.Controls.Helper.FilletStyle.EllipseBottom">
+            <summary>
+            下半圆，只能与上半圆同时设置
+            </summary>
+        </member>
+        <member name="F:HSUCF.Controls.Helper.FilletStyle.EllipseLeft">
+            <summary>
+            左半圆，只能与右半圆同时设置
+            </summary>
+        </member>
+        <member name="F:HSUCF.Controls.Helper.FilletStyle.EllipseRight">
+            <summary>
+            右半圆，只能与左半圆同时出现
+            </summary>
+        </member>
+        <member name="F:HSUCF.Controls.Helper.FilletStyle.EllipseVertical">
+            <summary>
+            垂直椭圆，只能单独设置
+            </summary>
+        </member>
+        <member name="F:HSUCF.Controls.Helper.FilletStyle.EllipseHorizontal">
+            <summary>
+            水平椭圆，只能单独设置
+            </summary>
+        </member>
+        <member name="T:HSUCF.Controls.Helper.FilletStyleHelper">
+            <summary>
+            圆角样式帮助类
+            </summary>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FilletStyleHelper.GetPath(HSUCF.Controls.Helper.FilletStyle,System.Int32,System.Drawing.Rectangle)">
+            <summary>
+            根据样式获取路径
+            </summary>
+            <param name="style"></param>
+            <param name="rad"></param>
+            <param name="rect"></param>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FilletStyleHelper.GetPath(HSUCF.Controls.Helper.FilletStyle,System.Int32,System.Drawing.RectangleF)">
+            <summary>
+            根据样式获取路径
+            </summary>
+            <param name="style"></param>
+            <param name="rad"></param>
+            <param name="rect"></param>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ExtendedFunc.GetValue``1(System.Object,System.String)">
+            <summary>
+            扩展方法  属性获取默认值时完成自动转换
+            </summary>
+            <param name="obj"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HSUCF.Controls.Helper.PinYin">
+            <summary>
+            拼音帮助类
+            </summary>
+        </member>
+        <member name="F:HSUCF.Controls.Helper.PinYin._charDictionary">
+            <summary>
+            汉字拼音首字母字典
+            </summary>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.PinYin.#cctor">
+            <summary>
+            初始化汉字拼音
+            </summary>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.PinYin.GetFirstPinyin(System.String)">
+            <summary>
+            汉字转化为拼音首字母组合
+            如果有多音字，则返回多个
+            </summary>
+            <param name="chinessStr">汉字</param>
+            <returns>首字母</returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.PinYin.ContainFilterStr(System.Collections.Generic.List{HSUCF.Controls.Helper.PinYinFilterObject},System.String[])">
+            <summary>
+            是否包含过滤字符串
+            </summary>
+            <param name="lsFilterObj">行数据</param>
+            <param name="filterText">输入字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.PinYin.MinIndexof(System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            获取最小索引
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.PinYin.GetPinYinPairByRow(System.Data.DataRow,System.Int32)">
+            <summary>
+            获取将美一行的值转化为拼音搜索对象
+            </summary>
+            <param name="dr"></param>
+            <param name="columnCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.PinYin.InitCharDictionary">
+            <summary>
+            初始化汉字拼音首字母表
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.PinYinFilterObject.FilterString">
+            <summary>
+            过滤字符串
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.PinYinFilterObject.FilterIndex">
+            <summary>
+            上一次过滤索引
+            </summary>
+        </member>
+        <member name="T:HSUCF.Controls.Helper.SkinManager">
+            <summary>
+            皮肤管理器
+            </summary>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.SkinManager.ConverntEnvironmentToStr(HSUCF.Controls.Helper.ENVIRONMENT_TYPE)">
+            <summary>
+            将枚举转化为字符串
+            </summary>
+            <param name="environmenType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.SkinManager.ConverntStrToEnvironment(System.String)">
+            <summary>
+            将字符串转化为枚举
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.SkinManager.CreateType(System.String,System.String)">
+            <summary>
+            创建对象类型
+            </summary>
+            <param name="path">程序集路径</param>
+            <param name="type">程序集名称（带命名空间）</param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.SkinManager.SetEnvironment(HSUCF.Controls.Helper.ENVIRONMENT_TYPE,System.String)">
+            <summary>
+            注册皮肤环境变量
+            注意：注册环境变量的路径时为全路径
+            </summary>
+            <param name="environmenType">环境变量类型</param>
+            <param name="value">环境变量值</param>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.SkinManager.GetEnvironmentPath(HSUCF.Controls.Helper.ENVIRONMENT_TYPE)">
+            <summary>
+            获取环境变量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.SkinManager.#cctor">
+            <summary>
+            设计时加载皮肤对象路径
+            </summary>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.SkinManager.InitStyle(System.String,System.String,System.Boolean)">
+            <summary>
+            换肤/读取默认值
+            </summary>
+            <param name="skinName">换肤的皮肤名称，当skinName为空时，不抛出换肤事件</param>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.SkinManager.CurrSkinPlan">
+            <summary>
+            当前皮肤
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.SkinManager.Item(System.String)">
+            <summary>
+            获取皮肤属性值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="E:HSUCF.Controls.Helper.SkinManager.SkinChangeEvent">
+            <summary>
+            换肤事件
+            </summary>
+        </member>
+        <member name="T:HSUCF.Controls.Helper.SkinChangeHandle">
+            <summary>
+            换肤事件
+            </summary>
+        </member>
+        <member name="T:HSUCF.Controls.Helper.ENVIRONMENT_TYPE">
+            <summary>
+            环境变量类型枚举
+            </summary>
+        </member>
+        <member name="F:HSUCF.Controls.Helper.ENVIRONMENT_TYPE.ENVIRONMENT_PATH">
+            <summary>
+            环境变量 路径名称
+            </summary>
+        </member>
+        <member name="F:HSUCF.Controls.Helper.ENVIRONMENT_TYPE.ENVIRONMENT_SKINNAME">
+            <summary>
+            环境变量 皮肤名称
+            </summary>
+        </member>
+        <member name="T:HSUCF.Controls.Helper.hsControlSkinBase">
+            <summary>
+            控件皮肤基类
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlSkinBase.CommDefault">
+            <summary>
+            公共默认皮肤
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlSkinBase.StyleDefaultList">
+            <summary>
+            控件类型皮肤
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlSkinBase.hsButtonDefault">
+            <summary>
+            hsButton控件默认皮肤
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlSkinBase.MessageBoxFormDefault">
+            <summary>
+            消息窗口MessageBoxForm皮肤
+            </summary>
+        </member>
+        <member name="T:HSUCF.Controls.Helper.hsControlCommDefault">
+            <summary>
+            公共默认值
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.BackColorNormal">
+            <summary>
+            背景色，正常状态
+            </summary> 
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.ForeColorNormal">
+            <summary>
+            前景色，正常状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.BorderColorNormal">
+            <summary>
+            边框色，正常状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.BackColorHover">
+            <summary>
+            背景色，鼠标经过状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.ForeColorHover">
+            <summary>
+            前景色，鼠标经过状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.BorderColorHover">
+            <summary>
+            边框色，鼠标经过状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.BackColorActive">
+            <summary>
+            背景色，激活状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.ForeColorActive">
+            <summary>
+            前景色，激活状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.BorderColorActive">
+            <summary>
+            边框色，激活状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.BackColorDisable">
+            <summary>
+            背景色，禁用状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.ForeColorDisable">
+            <summary>
+            前景色，禁用状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.BorderColorDisable">
+            <summary>
+            边框色，禁用状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.Required">
+            <summary>
+            必输项
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.RequiredForeColor">
+            <summary>
+            必输项提示的前景色
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.HighItemSelectedColor">
+            <summary>
+            下拉框高亮颜色
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.ShowH3Scroll">
+            <summary>
+            启用h3样式滚动条
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.BorderColorReadOnly">
+            <summary>
+            只读边框颜色
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.LockedActiveEnableChanged">
+            <summary>
+            按下锁控件是否触发锁
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlCommDefault.DisabledShowToolTip">
+            <summary>
+            当控件Enabled为False时，是否显示气泡提示
+            </summary>
+        </member>
+        <member name="T:HSUCF.Controls.Helper.hsControlStyleSkin">
+            <summary>
+            输入框类型皮肤
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlStyleSkin.ControlNameList">
+            <summary>
+            该类型所包含的控件名称
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlStyleSkin.BackColorNormal">
+            <summary>
+            背景色，正常状态
+            </summary> 
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlStyleSkin.ForeColorNormal">
+            <summary>
+            前景色，正常状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlStyleSkin.BorderColorNormal">
+            <summary>
+            边框色，正常状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlStyleSkin.BackColorHover">
+            <summary>
+            背景色，鼠标经过状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlStyleSkin.ForeColorHover">
+            <summary>
+            前景色，鼠标经过状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlStyleSkin.BorderColorHover">
+            <summary>
+            边框色，鼠标经过状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlStyleSkin.BackColorActive">
+            <summary>
+            背景色，激活状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlStyleSkin.ForeColorActive">
+            <summary>
+            前景色，激活状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlStyleSkin.BorderColorActive">
+            <summary>
+            边框色，激活状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlStyleSkin.BackColorDisable">
+            <summary>
+            背景色，禁用状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlStyleSkin.ForeColorDisable">
+            <summary>
+            前景色，禁用状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlStyleSkin.BorderColorDisable">
+            <summary>
+            边框色，禁用状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlStyleSkin.Required">
+            <summary>
+            必输项
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlStyleSkin.RequiredForeColor">
+            <summary>
+            必输项提示的前景色
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsControlStyleSkin.LockedActiveEnableChanged">
+            <summary>
+            按下锁控件是否触发锁
+            </summary>
+        </member>
+        <member name="T:HSUCF.Controls.Helper.hsButtonSkin">
+            <summary>
+            hsButton皮肤
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsButtonSkin.BackColorNormal">
+            <summary>
+            背景色，正常状态
+            </summary> 
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsButtonSkin.ForeColorNormal">
+            <summary>
+            前景色，正常状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsButtonSkin.BorderColorNormal">
+            <summary>
+            边框色，正常状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsButtonSkin.BackColorHover">
+            <summary>
+            背景色，鼠标经过状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsButtonSkin.ForeColorHover">
+            <summary>
+            前景色，鼠标经过状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsButtonSkin.BorderColorHover">
+            <summary>
+            边框色，鼠标经过状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsButtonSkin.BackColorActive">
+            <summary>
+            背景色，激活状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsButtonSkin.ForeColorActive">
+            <summary>
+            前景色，激活状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsButtonSkin.BorderColorActive">
+            <summary>
+            边框色，激活状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsButtonSkin.BackColorDisable">
+            <summary>
+            背景色，禁用状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsButtonSkin.ForeColorDisable">
+            <summary>
+            前景色，禁用状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsButtonSkin.BorderColorDisable">
+            <summary>
+            边框色，禁用状态
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsButtonSkin.BorderWidth">
+            <summary>
+            边框宽度
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsButtonSkin.IsDefaultVisionEnabled">
+            <summary>
+            是否启用默认按钮时视觉反馈
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsButtonSkin.Radius">
+            <summary>
+            圆角半径
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.hsButtonSkin.FilletStyle">
+            <summary>
+            圆角样式
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.MessageBoxFormSkin.BackColor">
+            <summary>
+            窗体背景色
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.MessageBoxFormSkin.BackgroundImage">
+            <summary>
+            背景图片
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.MessageBoxFormSkin.Icon">
+            <summary>
+            标题图标
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.MessageBoxFormSkin.ShowIcon">
+            <summary>
+            是否显示标题图标
+            </summary>
+        </member>
+        <member name="T:HSUCF.Controls.Helper.ControlsHelper">
+            <summary>
+            控件帮助类
+            </summary>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.IsDesignMode">
+            <summary>
+            是否处于设计模式，调用进程名不能为devenv，否则也会被判断为设计期
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.UIInvoker(System.Action)">
+            <summary>
+            将方法委托到主线程执行
+            </summary>
+            <param name="action">需要委托到主线程的调用</param>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.UIInvoker``1(System.Action{``0},``0)">
+            <summary>
+            将方法委托到主线程执行
+            </summary>
+            <typeparam name="T">调用方法入参类型</typeparam>
+            <param name="action">需要委托到主线程的调用</param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.UIInvoker``2(System.Action{``0,``1},``0,``1)">
+            <summary>
+            将方法委托到主线程执行
+            </summary>
+            <typeparam name="T">调用方法入参类型</typeparam>
+            <param name="action">需要委托到主线程的调用</param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.UIInvoker``3(System.Action{``0,``1,``2},``0,``1,``2)">
+            <summary>
+            将方法委托到主线程执行
+            </summary>
+            <typeparam name="T">调用方法入参类型</typeparam>
+            <param name="action">需要委托到主线程的调用</param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.UIInvoker``4(System.Action{``0,``1,``2,``3},``0,``1,``2,``3)">
+            <summary>
+            将方法委托到主线程执行
+            </summary>
+            <typeparam name="T">调用方法入参类型</typeparam>
+            <param name="action">需要委托到主线程的调用</param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.UIInvoker``5(System.Action{``0,``1,``2,``3,``4},``0,``1,``2,``3,``4)">
+            <summary>
+            将方法委托到主线程执行
+            </summary>
+            <typeparam name="T">调用方法入参类型</typeparam>
+            <param name="action">需要委托到主线程的调用</param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.UIInvoker``6(System.Action{``0,``1,``2,``3,``4,``5},``0,``1,``2,``3,``4,``5)">
+            <summary>
+            将方法委托到主线程执行
+            </summary>
+            <typeparam name="T">调用方法入参类型</typeparam>
+            <param name="action">需要委托到主线程的调用</param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.UIInvoker``7(System.Action{``0,``1,``2,``3,``4,``5,``6},``0,``1,``2,``3,``4,``5,``6)">
+            <summary>
+            将方法委托到主线程执行
+            </summary>
+            <typeparam name="T">调用方法入参类型</typeparam>
+            <param name="action">需要委托到主线程的调用</param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.UIInvoker``8(System.Action{``0,``1,``2,``3,``4,``5,``6,``7},``0,``1,``2,``3,``4,``5,``6,``7)">
+            <summary>
+            将方法委托到主线程执行
+            </summary>
+            <typeparam name="T">调用方法入参类型</typeparam>
+            <param name="action">需要委托到主线程的调用</param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.IntToDateStr(System.Int32)">
+            <summary>
+            整数类型的日期（20090109）转换为字符串格式的日期（2009-01-09）
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.IntToTimeStr(System.Int32)">
+            <summary>
+            整数类型的时间（235959）转换为字符串格式的日期（23:59:59）
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.IntToDate(System.Int32,System.Int32)">
+            <summary>
+            将整数格式日期和时间转换为DateTime
+            </summary>
+            <param name="date">日期</param>
+            <param name="time">时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.IntToDateStr(System.Int32,System.Int32)">
+            <summary>
+            将整数格式日期和时间转换为用于显示的格式化时间字符串，格式为2014-1-23 16:34:46
+            </summary>
+            <param name="date">整数格式日期，不想在输出字符串中出现可设置为小于0的任意数</param>
+            <param name="time">整数格式时间，不想在输出字符串中出现可设置为小于0的任意数</param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.IntToDateStr(System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+            将整数格式日期和时间转换为用于显示的格式化时间字符串
+            </summary>
+            <param name="date">整数格式日期，不想在输出字符串中出现可设置为小于0的任意数</param>
+            <param name="dateFormat">日期输出格式，如yyyy-MM-dd，输出为2014-01-23</param>
+            <param name="time">整数格式时间，不想在输出字符串中出现可设置为小于0的任意数</param>
+            <param name="timeFormat">时间输出格式，如HH:mm:ss，输出为16:32:42</param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.ListEquals(System.String,System.String,System.Char)">
+            <summary>
+            比较两个字符串列表是否相等
+            </summary>
+            <param name="s1">字符串1</param>
+            <param name="s2">字符串2</param>
+            <param name="spl">分割字符，默认为“,”</param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.GetStrList(System.String,System.Char)">
+            <summary>
+            获取字符串列表
+            </summary>
+            <param name="str">字符串</param>
+            <param name="spl">分隔符</param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.StringListContainsSub(System.String,System.String,System.Char)">
+            <summary>
+            比较一个字符串是否包含于另一个字符串
+            </summary>
+            <param name="str">父字符串</param>
+            <param name="sub">子字符串</param>
+            <param name="spl">分割字符，默认为“,”</param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.StringListContainsSub(System.String[],System.String)">
+            <summary>
+            比较一个字符串是否包含于另一个字符串
+            </summary>
+            <param name="strlist">父字符串</param>
+            <param name="sub">子字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.StringListContains(System.String,System.String,System.Char)">
+            <summary>
+            比较一个字符串所有子字符串是否包含于另一个字符串
+            </summary>
+            <param name="str">父字符串</param>
+            <param name="sub">子字符串</param>
+            <param name="spl">分割字符，默认为“,”</param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.StringListContains(System.String[],System.String[])">
+            <summary>
+            比较一个字符串所有子字符串是否包含于另一个字符串
+            </summary>
+            <param name="strlist">父字符串</param>
+            <param name="sublist">子字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.AttributeListGet``1(System.Reflection.MemberInfo,System.Boolean)">
+            <summary>
+            获取特性信息
+            </summary>
+            <typeparam name="TAttribute">特性类型</typeparam>
+            <param name="member">成员信息</param>
+            <param name="inherit">是否搜索该成员的继承链，默认false</param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.AttributeGet``1(System.Reflection.MemberInfo,System.Boolean)">
+            <summary>
+            获取特性信息
+            </summary>
+            <typeparam name="TAttribute">特性类型</typeparam>
+            <param name="member">成员信息</param>
+            <param name="inherit">是否搜索该成员的继承链，默认false</param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.ProgramDataDirectory(System.Int32)">
+            <summary>
+            获取应用程序数据目录
+            </summary>
+            <param name="operatorNo">操作员序号</param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.ProgramDataPath(System.Int32)">
+            <summary>
+            获取应用程序数据路径
+            </summary>
+            <param name="operatorNo">操作员序号</param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.ObjectSerializeXml``1(``0)">
+            <summary>
+            序列化
+            </summary>
+            <typeparam name="T">要序列化的对象类型</typeparam>
+            <param name="obj">要序列化的对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.XmlDeserializeObject``1(System.String)">
+            <summary>
+            反序列化
+            </summary>
+            <typeparam name="T">反序列化对象类型</typeparam>
+            <param name="xmlOfObject">反序列化字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.IPv4">
+            <summary>
+            获取本机IPv4地址
+            </summary>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.IPAddress">
+            <summary>
+            获取本机标准格式IP地址
+            </summary>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.Mac">
+            <summary>
+            获取Mac地址
+            </summary>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.GetHostName">
+            <summary>
+            取机器名    
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.CpuID">
+            <summary>
+            取CPU编号   
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.ControlsHelper.HardDiskID">
+            <summary>
+            取第一块硬盘编号   
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HSUCF.Controls.Helper.FlatBorderColors">
+            <summary>
+            边框颜色
+            </summary>
+        </member>
+        <member name="F:HSUCF.Controls.Helper.FlatBorderColors.Empty">
+            <summary>
+            空类型
+            </summary>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FlatBorderColors.#ctor(System.Drawing.Color)">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FlatBorderColors.#ctor(System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            初始化
+            </summary>
+            <param name="left">左边框</param>
+            <param name="top">上边框</param>
+            <param name="right">右边框</param>
+            <param name="bottom">下边框</param>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FlatBorderColors.ShouldSerializeAll">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.FlatBorderColors.IsEmpty">
+            <summary>
+            判断当前边框颜色值是否为空
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.FlatBorderColors.All">
+            <summary>
+            所有边框属性值
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.FlatBorderColors.Left">
+            <summary>
+            左边框
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.FlatBorderColors.Top">
+            <summary>
+            上边框
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.FlatBorderColors.Right">
+            <summary>
+            右边框
+            </summary>
+        </member>
+        <member name="P:HSUCF.Controls.Helper.FlatBorderColors.Bottom">
+            <summary>
+            下边框
+            </summary>
+        </member>
+        <member name="T:HSUCF.Controls.Helper.BordersColorsConverter">
+            <summary>
+            边框颜色转换器，注意：BordersColorConverter入参分隔符必须是';'
+            </summary>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.BordersColorsConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="sourceType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.BordersColorsConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="destinationType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.BordersColorsConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="culture"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.BordersColorsConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="culture"></param>
+            <param name="value"></param>
+            <param name="destinationType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.BordersColorsConverter.CreateInstance(System.ComponentModel.ITypeDescriptorContext,System.Collections.IDictionary)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="propertyValues"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.BordersColorsConverter.GetCreateInstanceSupported(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.BordersColorsConverter.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="value"></param>
+            <param name="attributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HSUCF.Controls.Helper.BordersColorsConverter.GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

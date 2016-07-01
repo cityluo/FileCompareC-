@@ -1,0 +1,4660 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hundsun.Framework.BizControls</name>
+    </assembly>
+    <members>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.ComboAccountGroup">
+            <summary>
+            账户组控件
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.ComboBase`1.COMMON_CATEGORY">
+            <summary>
+            业务控件属性分类
+            </summary>        
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.ComboBase`1.FILTER_CATEGORY">
+            <summary>
+            业务控件过滤分类
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.ComboBase`1._array">
+            <summary>
+             依赖实体数组，部分控件依赖其他表数据，表数据更新时，依赖此表数据的控件强制更新
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboBase`1.OnBeforeShowDropDown(System.Object,System.EventArgs)">
+            <summary>
+            收到缓存更新信号后，点击下拉框前刷新数据
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboBase`1.CacheSyncManagerOnCacheUpdateEventHandler(System.Collections.Generic.List{System.String})">
+            <summary>
+            缓存更新时刷新数据
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboBase`1.Dispose(System.Boolean)">
+            <summary>
+            释放并卸载事件
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboBase`1.RefreshData">
+            <summary>
+            刷新数据
+            </summary>
+            
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboBase`1.EndInit">
+            <summary>
+            hslabelcombobox.Endinit自动刷新控件数据，设置数据型，控件加载完毕后调用自动刷新数据
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboBase`1.ResetLabelText">
+            <summary>
+            重置标签数据
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboBase`1.InsertDataItem(System.Int32,`0)">
+            <summary>
+            在当前数据源中新增一项数据
+            </summary>
+            <param name="index">索引</param>
+            <param name="dataItem">新增的数据对象</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboBase`1.GetPropertyValue``1(System.Func{`0,``0})">
+            <summary>
+            获取属性值
+            </summary>
+            <typeparam name="TProp"></typeparam>
+            <param name="selector"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboBase`1.DataItemCount">
+            <summary>
+            业务控件中数据项个数
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.BaseControl.ComboBase`1.AfterRefreshData">
+            <summary>
+            数据刷新之后发生
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.BaseControl.ComboBase`1.BeforeRefreshData">
+            <summary>
+            数据刷新之前发生
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboBase`1.DataSource">
+            <summary>
+            此属性对业务控件无效
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboBase`1.KeyName">
+            <summary>
+            数据源主键
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboBase`1.VisibleColumnIndexs">
+            <summary>
+            显示数据源列的对应索引
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboAccountGroup.GroupTypes">
+            <summary>
+            账户组类型
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboAccountGroup.OperRight">
+            <summary>
+            操作员权限
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboAccountGroup.GroupID">
+            <summary>
+            账户分组ID
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboAccountGroup.CompanyID">
+            <summary>
+            公司ID
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboAccountGroup.DeptID">
+            <summary>
+            公司部门ID
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboAccountGroup.DataSource">
+            <summary>
+            自定义数据源
+            </summary> 
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.ComboAccountGroupType.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboAccountGroupType.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboAccountGroupType.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboAccountGroupType.FundLevel">
+            <summary>
+            账户组类型
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboAccountGroupType.DataSource">
+            <summary>
+            自定义数据源
+            </summary> 
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboAsset.Companyids">
+            <summary>
+            公司序号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboAsset.Deptids">
+            <summary>
+            部门序号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboAsset.FundID">
+            <summary>
+            账户序号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboAsset.GroupID">
+            <summary>
+            过滤账号组，表示列表只带出属性设置的账号组的资产单元。填写账号组，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboAsset.GroupType">
+            <summary>
+            过滤账户分组，表示列表只带出属性设置的账户分组的资产单元。填写账号组，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboAsset.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.ComboCombi">
+            <summary>
+            组合控件
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboCombi.PropertyStatus">
+            <summary>
+            账户状态
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboCombi.FundID">
+            <summary>
+            基金序号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboCombi.AssetID">
+            <summary>
+            资产单元序号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboCombi.PermitMarkets">
+            <summary>
+            允许投资的市场
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboCombi.FuturesInvestType">
+            <summary>
+            投资类型限制，组合允许投资的类型中包含列出来的投资类型，则会显示在组合列表中
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboCombi.GroupID">
+            <summary>
+            过滤账号组，表示列表只带出属性设置的账号组的资产单元。填写账号组，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboCombi.GroupType">
+            <summary>
+            过滤账户分组，表示列表只带出属性设置的账户分组的资产单元。填写账号组，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboCombi.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.ComboCompany.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboCompany.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboCompany.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboCompany.CompanyStatus">
+            <summary>
+            公司状态
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboCompany.CompanyType">
+            <summary>
+            公司类型
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.ComboDepartment.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboDepartment.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboDepartment.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboDepartment.CompanyID">
+            <summary>
+            公司编号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboDictionary.DictionaryNo">
+            <summary>
+            根据字典编号过滤字典项，带出指定字典编号的数据字典
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboDictionary.DicSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboEntrustDirection.InterCode">
+            <summary>
+            表示列表只带出当前证券的证券类别所有允许的委托方向列表(委托方向权限)。填写证券内码
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboEntrustDirection.StockTypeID">
+            <summary>
+            表示列表只带出当前证券类别所有允许的委托方向列表(委托方向权限)。填写证券类别编号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboEntrustDirection.MarketNo">
+            <summary>
+            表示列表只带出当前市场所有的委托方向列表。填写市场编号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboEntrustDirection.CombiID">
+            <summary>
+            表示列表只带出当前组合(支持多选，多选所有的委托方向列表。填写市场编号，支持多选
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboEntrustDirection.BusinType">
+            <summary>
+            根据委托方向的业务类别权限来过滤委托方向，只列出有业务类别权限的委托方向。填写业务类别编号，支持多选
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboEntrustDirection.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboFund.PropertyStatus">
+            <summary>
+            账户状态
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboFund.GroupID">
+            <summary>
+            账号组限制，基金允许账号组中包含列出来的账号组，则会显示在基金列表中
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboFund.GroupType">
+            <summary>
+            账户分组类型限制，基金允许账户分组类型中包含列出来的账户分组类型，则会显示在基金列表中
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboFund.CompanyID">
+            <summary>
+            公司ID
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboFund.DeptID">
+            <summary>
+            公司部门ID
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboFund.FundID">
+            <summary>
+            基金ID
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboFund.FundTypes">
+            <summary>
+            账户类型
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboFund.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboFund.EnableBranch">
+            <summary>
+            启用分仓，true只获取有分仓的账户，false获取所有
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboFund.GroupFa">
+            <summary>
+            是否分组估值
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboFund.InvestDirection">
+            <summary>
+            投资方向
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboMarket.MarketLimit">
+            <summary>
+            限制市场，限制当前输入的证券代码必须为指定市场的证券。填写市场编号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboMarket.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboOperator.PropertyStatus">
+            <summary>
+            账户状态
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboOperator.CompanyIds">
+            <summary>
+            公司编号，多个以逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboOperator.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.ComboRemark">
+            <summary>
+            带记忆功能的备注文本框
+            </summary> 
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboRemark.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboRemark.Dispose(System.Boolean)">
+            <summary>
+            释放并卸载事件
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboRemark.OnBeforeShowDropDown(System.Object,System.EventArgs)">
+            <summary>
+            收到缓存更新信号后，点击下拉框前刷新数据
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboRemark.CacheSyncManagerOnCacheUpdateEventHandler(System.Collections.Generic.List{System.String})">
+            <summary>
+            缓存更新时刷新数据
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboRemark.cbbRemark_Leave(System.Object,System.EventArgs)">
+            <summary>
+            丢失焦点后保存值
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboRemark.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)">
+            <summary>
+            按DELETE删除备注
+            </summary>
+            <param name="msg"></param>
+            <param name="keyData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboRemark.AddValue">
+            <summary>
+            添加备注
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboRemark.DelValue(System.Int32)">
+            <summary>
+            删除备注
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboRemark.GetDataSource">
+            <summary>
+            将数据源转为List
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboRemark.RefreshDataSource(System.String,System.Boolean)">
+            <summary>
+            刷新数据源
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboRemark.SaveParamValue">
+            <summary>
+            保存至数据库
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboRemark.DataSource">
+            <summary>
+            获取数据源 （仅限json格式）
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboRemark.Value">
+            <summary>
+            获取或设置值
+            </summary>  
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboRemark.PerParamId">
+            <summary>
+            获取或设置个人参数编号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboRemark.MaxRowCount">
+            <summary>
+            获取或设置显示最大行数
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.RemarkInfo.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboSeat.MainSeatID">
+            <summary>
+            AllSeat：根据主席位过滤当前席位列表 
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboSeat.MarketNo">
+            <summary>
+            根据市场过滤席位/交易席位列表
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboSeat.FundID">
+            <summary>
+            AllTradeSeat：根据基金来过滤交易席位列表。 
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboSeat.CombiIds">
+            <summary>
+            股东指定状态为 5-深交所托管时，在股东信息表的持仓席位为空，导致无法查询到席位，前台显示为空。 
+            对于这种情况，需要再传入组合编号，根据组合编号从组合席位关系表中获取seat_id，再根据seat_id从席位信息表中获取main_seat。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboSeat.BusinessClass">
+            <summary>
+            固定收益大宗业务支持
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboSeat.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboSeat.StockHolderIds">
+            <summary>
+            AllSeat：根据股东代码过滤当前席位列表
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.COMMON_CATEGORY">
+            <summary>
+            业务控件属性分类
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.FILTER_CATEGORY">
+            <summary>
+            业务控件过滤分类
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.ClearStockCode">
+            <summary>
+            清空输入内容
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+            <summary>
+            控件布局
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.txtStockCode_FilterText(System.Object,Hundsun.Framework.BizControls.BaseControl.FilterTextEventArgs)">
+            <summary>
+            过滤事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.GetDataSource">
+            <summary>
+            获取过滤数据源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.GetMatch(Hundsun.Framework.Common.CacheEntity.BaseEntityTstock,System.String)">
+            <summary>
+            获取实体类中ReportCode和StockName中匹配关键词的最大索引
+            </summary>
+            <param name="entity"></param>
+            <param name="keyword"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.ReadOnly">
+            <summary>
+            获取或设置一个值，该值指示文本框中的文本是否为只读
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.MarketLimit">
+            <summary>
+            限制市场，限制当前输入的证券代码必须为指定市场的证券。填写市场编号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.MarketExcept">
+            <summary>
+            排除市场，限制当前输入的证券代码必须为指定市场的证券。填写市场编号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.StockTypeLimit">
+            <summary>
+            限制证券类别，限制当前输入的证券代码必须为指定证券类别的证券。填写证券类别编号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.StockTypeExcept">
+            <summary>
+            排除证券类别，限制当前控件不允许输入的证券代码为指定证券类别的证券。填写证券类别编号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.CodeLength">
+            <summary>
+            证券代码允许的最大长度
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.AssetTypeLimit">
+            <summary>
+            限制资产类别，限制当前输入的证券代码必须为指定资产类别的证券。填写资产类别编号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.ListMode">
+            <summary>
+            证券代码显示模式
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.StatusLimit">
+            <summary>
+            允许的证券类别
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.MarketNo">
+            <summary>
+            返回当前输入证券的市场编号，证券代码未通过校验返回为空
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.StockTypeID">
+            <summary>
+            返回当前输入证券的证券类别编号，证券代码未通过校验返回为空
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.StockName">
+            <summary>
+            返回当前输入证券的证券名称，证券代码未通过校验返回为空
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.InterCode">
+            <summary>
+            设置/返回当前控件的证券内码
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.StockCode">
+            <summary>
+            设置/返回控件当前代码
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockCode.InputText">
+            <summary>
+            返回控件当前输入内容
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHolder.FundID">
+            <summary>
+            StockHolder：根据股东使用的基金权限来过滤股东列表，填写基金序号，支持多个过滤，以英文逗号分隔。 
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHolder.CombiID">
+            <summary>
+             根据交易股东对应的组合来过滤交易股东列表，填写组合序号，支持多个过滤，以英文逗号分隔。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHolder.MarketNo">
+            <summary>
+            根据股东所在的市场来过滤股东列表，填写市场编号，支持多个过滤，以英文逗号分隔。 
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHolder.InvestType">
+            <summary>
+             根据股东使用投资类型来过滤股东列表，填写市投资类型，支持多个过滤，以英文逗号分隔。 
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHolder.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.COMMON_CATEGORY">
+            <summary>
+            业务控件属性分类
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.FILTER_CATEGORY">
+            <summary>
+            业务控件过滤分类
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.ClearStockCode">
+            <summary>
+            清空输入内容
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.GetMaxIndexOfStr(Hundsun.Framework.Common.CacheEntity.BaseEntityTstock,System.String)">
+            <summary>
+            获取实体类中ReportCode和StockName中匹配关键词的最大索引
+            </summary>
+            <param name="entity"></param>
+            <param name="keyword"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.ReadOnly">
+            <summary>
+            获取或设置一个值，该值指示文本框中的文本是否为只读
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.MarketLimit">
+            <summary>
+            限制市场，限制当前输入的证券代码必须为指定市场的证券。填写市场编号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.MarketExcept">
+            <summary>
+            排除市场，限制当前输入的证券代码必须为指定市场的证券。填写市场编号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.StockTypeLimit">
+            <summary>
+            限制证券类别，限制当前输入的证券代码必须为指定证券类别的证券。填写证券类别编号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.StockTypeExcept">
+            <summary>
+            排除证券类别，限制当前控件不允许输入的证券代码为指定证券类别的证券。填写证券类别编号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.CodeLength">
+            <summary>
+            证券代码允许的最大长度
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.AssetTypeLimit">
+            <summary>
+            限制资产类别，限制当前输入的证券代码必须为指定资产类别的证券。填写资产类别编号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.ListMode">
+            <summary>
+            证券代码显示模式
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.StatusLimit">
+            <summary>
+            允许的证券类别
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.MarketNo">
+            <summary>
+            返回当前输入证券的市场编号，证券代码未通过校验返回为空
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.StockTypeID">
+            <summary>
+            返回当前输入证券的证券类别编号，证券代码未通过校验返回为空
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.StockName">
+            <summary>
+            返回当前输入证券的证券名称，证券代码未通过校验返回为空
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.InterCode">
+            <summary>
+            设置/返回当前控件的证券内码
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.StockCode">
+            <summary>
+            设置/返回控件当前代码
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockHorizontal.InputText">
+            <summary>
+            返回控件当前输入内容
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ComboStockType.RefreshDataInternal">
+            <summary>
+            刷新数据
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockType.MarketNo">
+            <summary>
+            过滤市场，表示列表只带出市场是属性设置的市场的证券类别。填写市场序号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockType.AssetClass">
+            <summary>
+            过滤资产类别，表示列表只带出资产类别是属性设置的资产类别的证券类别。填写资产类别序号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockType.CombiID">
+            <summary>
+            过滤组合，表示列表只带出组合上有此证券类别权限的证券类别。填写组合序号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockType.ListMode">
+            <summary>
+            显示模式
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboStockType.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboTradeRival.MarketTypes">
+            <summary>
+            根据交易对手的市场类型过滤交易对手列表
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboTradeRival.OnlyValid">
+            <summary>
+            是否只显示正常的交易对手，缺省是False，表示显示所有交易对手
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboTradeRival.RivalTypes">
+            <summary>
+            交易对手分类
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ComboTradeRival.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.IDropDownHost">
+            <summary>
+            下拉框宿主
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.IDropDownHost.OpenDropDown(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            打开下拉框
+            </summary>
+            <param name="x">显示下拉框的x位置</param>
+            <param name="y">显示下拉框的y位置</param>
+            <param name="width">下拉框宽度</param>
+            <param name="height">下拉宽高度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.IDropDownHost.OpenDropDown(System.Windows.Forms.Control,System.Int32,System.Int32)">
+            <summary>
+            打开下拉框
+            </summary>
+            <param name="control">下拉框显示位置的控件</param>
+            <param name="width">下拉框宽度</param>
+            <param name="height">下拉宽高度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.IDropDownHost.CloseDropDown">
+            <summary>
+            关闭下拉框
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.IDropDownHost.DropDownContent">
+            <summary>
+            显示下拉内容的控件
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.IDropDownHost.DroppedDown">
+            <summary>
+            是否处于下拉状态
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.IDropDownHost.BindingContext">
+            <summary>
+            绑定上下文（如果显示内容的控件是基于数据源的，那么需要设置上下文，否则无法显示）
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.BaseControl.IDropDownHost.DropDownOpening">
+            <summary>
+            下拉框即将打开事件
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.BaseControl.IDropDownHost.DropDownOpened">
+            <summary>
+            下拉框打开事件
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.BaseControl.IDropDownHost.DropDownClosing">
+            <summary>
+            下拉框即将关闭事件
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.BaseControl.IDropDownHost.DropDownClosed">
+            <summary>
+            下拉框已关闭事件
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.CustomDropDownHost.OpenDropDown(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            打开下拉框，设置坐标和高宽
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.CustomDropDownHost.PreFilterMessage(System.Windows.Forms.Message@)">
+            <summary>
+            处理选中事件消息
+            </summary>
+            <param name="m"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.CustomDropDownHost.OnMouseDown">
+            <summary>
+            鼠标如果在下拉框以外的地方点击关闭下拉框
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.DropDownListView">
+            <summary>
+            下拉列表
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.IDropDownList">
+            <summary>
+            下拉列表接口
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.IDropDownList.SetDefatulSize(System.Int32,System.Int32)">
+            <summary>
+            第一次显示时，设置下拉默认的大小
+            </summary>
+            <param name="width">宽度</param>
+            <param name="heigt">高度</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.IDropDownList.CalculateAutoWidth(System.Int32)">
+            <summary>
+            根据设置的下拉框高度计算出展示所需的宽度
+            </summary>
+            <param name="heigt">高度</param>
+            <returns>完全展示需要的宽度</returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.IDropDownList.GetCheckedItems">
+            <summary>
+            获取所有勾选的项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.IDropDownList.SetItemChecked(System.Int32,System.Boolean)">
+            <summary>
+            置某项的勾选状态
+            </summary>
+            <param name="index">索引</param>
+            <param name="value">勾选传入true；否则传入false</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.IDropDownList.SelectNextItem">
+            <summary>
+            定位到下一个数据项
+            </summary>
+            <returns>是否定位成功</returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.IDropDownList.SelectPreviousItem">
+            <summary>
+            定位前一条记录
+            </summary>
+            <returns>是否定位成功</returns>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.IDropDownList.DropDownHost">
+            <summary>
+            下拉容器接口
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.IDropDownList.Width">
+            <summary>
+            下拉框的宽度
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.IDropDownList.Height">
+            <summary>
+            下拉框的高度
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.IDropDownList.Visible">
+            <summary>
+            下拉列表是否可见
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.IDropDownList.Handle">
+            <summary>
+            句柄
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.IDropDownList.ReadOnly">
+            <summary>
+            是否只读
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.IDropDownList.DataSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.IDropDownList.BindingContext">
+            <summary>
+            数据源绑定管理对象
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.IDropDownList.Bounds">
+            <summary>
+            下拉框的区域
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.IDropDownList.ItemHeight">
+            <summary>
+            数据项高度
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.IDropDownList.SelectedIndex">
+            <summary>
+            当前鼠标所定位的项
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.BaseControl.IDropDownList.MeasureColor">
+            <summary>
+            获取展示某条数据的颜色时发生
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.BaseControl.IDropDownList.MeasureListDisplays">
+            <summary>
+            获取展示某条数据中部分数据项时发生
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.BaseControl.IDropDownList.SelectedChanged">
+            <summary>
+            定位记录变化时发生
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.BaseControl.IDropDownList.CheckedChanged">
+            <summary>
+            勾选记录发生变化时发生
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.DropDownListView.OnDrawItem(System.Windows.Forms.DrawListViewItemEventArgs)">
+            <summary>
+            画数据项样式
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.DropDownListView.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标点击事件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.DropDownListView.OnClick(System.EventArgs)">
+            <summary>
+            基类控件响应点击事件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.DropDownListView.ClearChecked">
+            <summary>
+            清除选中
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.DropDownListView.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标滑过事件切换焦点
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.DropDownListView.OnMouseWheel(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标滚轮切换焦点
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.DropDownListView.OnMeasureColor(Hundsun.Framework.BizControls.BaseControl.MeasureColorEventArgs)">
+            <summary>
+            展现项颜色时  事件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.DropDownListView.OnSelectedChanged(System.EventArgs)">
+            <summary>
+            焦点改变
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.DropDownListView.OnCheckedChanged(System.EventArgs)">
+            <summary>
+            选中项事件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.DropDownListView.OnMeasureListDisplays(Hundsun.Framework.BizControls.BaseControl.MeasureListDisplaysEventArgs)">
+            <summary>
+            获取展示某条数据中部分数据项时  事件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.DropDownListView.GetFirstSelectedIndex">
+            <summary>
+            获取结果集第一项的索引
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.DropDownListView.ChangeSelectItem(System.Int32)">
+            <summary>
+            改变选择项
+            </summary>
+            <param name="newIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.DropDownListView.CalculateAutoWidth(System.Int32)">
+            <summary>
+            自动运算最大宽度
+            </summary>
+            <param name="height"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.DropDownListView.SetDefatulSize(System.Int32,System.Int32)">
+            <summary>
+            设置默认大小，如果设置的宽度大于运算的最大宽度，则最后一列的宽度加上剩余的宽度
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.DropDownListView.Hundsun#Framework#BizControls#BaseControl#IDropDownList#SetItemChecked(System.Int32,System.Boolean)">
+            <summary>
+            设置选中项
+            </summary>
+            <param name="index"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.DropDownListView.Hundsun#Framework#BizControls#BaseControl#IDropDownList#GetCheckedItems">
+            <summary>
+            获取当前选中项 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.DropDownListView.Hundsun#Framework#BizControls#BaseControl#IDropDownList#SelectNextItem">
+            <summary>
+            焦点跳转到下一项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.DropDownListView.Hundsun#Framework#BizControls#BaseControl#IDropDownList#SelectPreviousItem">
+            <summary>
+            焦点跳到前一项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.DropDownListView.Hundsun#Framework#BizControls#BaseControl#IDropDownList#SelectedIndex">
+            <summary>
+            设置焦点
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.DropDownListView.Hundsun#Framework#BizControls#BaseControl#IDropDownList#DropDownHost">
+            <summary>
+            获取当前下拉框宿主
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.DropDownListView.Hundsun#Framework#BizControls#BaseControl#IDropDownList#ItemHeight">
+            <summary>
+            获取当前第一行高度
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.RightsType">
+            <summary>
+            操作员权限
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.RightsType.SelectRights">
+            <summary>
+            查询权限
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.RightsType.ManageRights">
+            <summary>
+            管理权限
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.CodeNameRelation">
+            <summary>
+            证券代码和证券名称相对位置
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.CodeNameRelation.CodeAboveName">
+            <summary>
+            代码在名称上面
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.CodeNameRelation.CodeBeforeName">
+            <summary>
+            代码在名称前面
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.HolderListMode">
+            <summary>
+            股东显示模式
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.HolderListMode.StockHolder">
+            <summary>
+            股东列表
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.HolderListMode.TradeHolder">
+            <summary>
+            交易股东列表
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.StockStatus">
+            <summary>
+            股票状态
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.OperatorListMode">
+            <summary>
+            操作员显示模式
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.OperatorListMode.All">
+            <summary>
+            所有操作员
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.OperatorListMode.TradeOperator">
+            <summary>
+            交易员
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.ListMode">
+            <summary>
+            显示模式
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.ListMode.All">
+            <summary>
+            显示所有
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.ListMode.OpRights">
+            <summary>
+            操作权限
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.ListMode.QueryRights">
+            <summary>
+            查询权限
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.ListMode.CheckRights">
+            <summary>
+            复合权限
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.ListMode.ApprovalRights">
+            <summary>
+            审批权限
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.Status.All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.Status.Valid">
+            <summary>
+            有效
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.Status.Invalid">
+            <summary>
+            无效
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.OperatorType.Current">
+            <summary>
+            表示只列出当前操作员的查询管理组
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.OperatorType.All">
+            <summary>
+            表示只列出所有操作员的查询管理组
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.MarketType">
+            <summary>
+            市场类型
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.MarketType.All">
+            <summary>
+            所有市场
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.MarketType.China">
+            <summary>
+            中国市场
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.MarketType.Other">
+            <summary>
+            其他市场
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.OperRight">
+            <summary>
+            操作权限
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.OperRight.All">
+            <summary>
+            所有权限
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.OperRight.Valid">
+            <summary>
+            有权限
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.OperRight.Invalid">
+            <summary>
+            无权限
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.FundRight">
+            <summary>
+            基金权限
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.FundRight.Query">
+            <summary>
+            查询
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.FundRight.Operate">
+            <summary>
+            操作
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.RivalType">
+            <summary>
+            交易对手分类
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.RivalType.Outer">
+            <summary>
+            外部对手
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.RivalType.Inner">
+            <summary>
+            内部对手
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.RivalType.All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.RightLimit">
+            <summary>
+            账户权限
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.RightLimit.Select">
+            <summary>
+            查询
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.RightLimit.Operate">
+            <summary>
+            操作
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.RightLimit.Approve">
+            <summary>
+            审批
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.RightLimit.Verification">
+            <summary>
+            复核
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.SeatListMode">
+            <summary>
+            席位模式
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.SeatListMode.AllSeat">
+            <summary>
+            所有席位列表
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.SeatListMode.MainSeat">
+            <summary>
+            所有席位的主席位列表
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.SeatListMode.AllTradeSeat">
+            <summary>
+            所有交易席位列表
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.SeatListMode.MainTradeSeat">
+            <summary>
+            所有交易席位主席位列表
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.Export.ExportButton.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.Export.ExportButton.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.Export.ExportButton.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.Export.ExportButton.Exporter">
+            <summary>
+            文件导出器
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.Export.ExportButton.DefaultFileName">
+            <summary>
+            默认文件名
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.Export.ExportButton.DefaultExportDirectory">
+            <summary>
+            默认导出路径
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.Export.ToolStripExportButton.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.Export.ToolStripExportButton.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.Export.ToolStripExportButton.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.Export.ToolStripExportButton.DataSourceControl">
+            <summary>
+            需要导出数据的数据源控件
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.Export.ToolStripExportButton.DefaultFileName">
+            <summary>
+            默认文件名
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.Export.ToolStripExportButton.DefaultExportDirectory">
+            <summary>
+            默认导出路径
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.FilterTextBox._closeWithWhiteSpace">
+            <summary>
+            空格键关闭下拉框
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.FilterTextBox.dropDownList_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            选中项改变事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.FilterTextBox.OnTextChanged(System.EventArgs)">
+            <summary>
+            输入框文本改变事件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.FilterTextBox.OnLostFocus(System.EventArgs)">
+            <summary>
+            下拉框关闭状态，丢失焦点
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.FilterTextBox.Filter(System.String)">
+            <summary>
+            过滤结果，并返回是否结果
+            </summary>
+            <param name="text">过滤的文本</param>
+            <returns>有结果则返回true，否则返回fals</returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.FilterTextBox.OnFilterText(Hundsun.Framework.BizControls.BaseControl.FilterTextEventArgs)">
+            <summary>
+            过滤结果数据
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.FilterTextBox.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)">
+            <summary>
+            接收键盘处理
+            </summary>
+            <param name="msg"></param>
+            <param name="keyData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.FilterTextBox.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            消息处理
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.FilterTextBox.CloseWithWhiteSpace">
+            <summary>
+            空白时关闭下拉框
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.FilterTextBox.DataSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.FilterTextBox.ExtraWidth">
+            <summary>
+            下拉框额外宽度
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.FilterTextBox.DroppedDown">
+            <summary>
+            设置或获取下拉框状态
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.FilterTextBox.DropDownListView">
+            <summary>
+            下拉列表框
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.BaseControl.FilterTextBox.MeasureDispaly">
+            <summary>
+            获取文本框内显示的信息
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.BaseControl.FilterTextBox.MeasureListDisplays">
+            <summary>
+            获取需要显示在列表中的数据
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.BaseControl.FilterTextBox.FilterText">
+            <summary>
+            过滤时发生
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.FilterTextEventArgs">
+            <summary>
+            过滤事件参数
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.FilterTextEventArgs.Text">
+            <summary>
+            过滤的文本
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.FilterTextEventArgs.HaveRecord">
+            <summary>
+            过滤后是否有结果
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.MeasureColorEventHandler">
+            <summary>
+            单击事件置某项的颜色变化
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MeasureColorEventArgs.BackColor">
+            <summary>
+            背景颜色
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MeasureColorEventArgs.ForeColor">
+            <summary>
+            前景颜色
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MeasureListDisplaysEventArgs.Displays">
+            <summary>
+            展示的数据项数组
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.ISupportRefreshData">
+            <summary>
+            支持数据刷新
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.ISupportRefreshData.RefreshData">
+            <summary>
+            刷新数据
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ISupportRefreshData.AutoRefreshData">
+            <summary>
+            初始化时是否自动加载数据
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.ISupportRefreshData.IsDataRefreshed">
+            <summary>
+            数据是否已经刷新
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.BaseControl.ISupportRefreshData.AfterRefreshData">
+            <summary>
+            数据刷新后发生
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.BaseControl.ISupportRefreshData.BeforeRefreshData">
+            <summary>
+            数据刷新之前发生
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.MultiComboAccountGroup">
+            <summary>
+            账户组控件
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.MultiComboBase`1.COMMON_CATEGORY">
+            <summary>
+            业务控件属性分类
+            </summary>        
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.MultiComboBase`1.FILTER_CATEGORY">
+            <summary>
+            业务控件过滤分类
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.MultiComboBase`1._array">
+            <summary>
+             依赖实体数组，部分控件依赖其他表数据，表数据更新时，依赖此表数据的控件强制更新
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.MultiComboBase`1.OnBeforeShowDropDown(System.Object,System.EventArgs)">
+            <summary>
+            收到缓存更新信号后，点击下拉框前刷新数据
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.MultiComboBase`1.CacheSyncManagerOnCacheUpdateEventHandler(System.Collections.Generic.List{System.String})">
+            <summary>
+            缓存更新时刷新数据
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.MultiComboBase`1.Dispose(System.Boolean)">
+            <summary>
+            释放并卸载事件
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.MultiComboBase`1.RefreshData">
+            <summary>
+            刷新数据
+            </summary>
+            
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.MultiComboBase`1.EndInit">
+            <summary>
+            hslabelcombobox.Endinit自动刷新控件数据，设置数据型，控件加载完毕后调用自动刷新数据
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.MultiComboBase`1.ResetLabelText">
+            <summary>
+            重置标签数据
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.MultiComboBase`1.InsertDataItem(System.Int32,`0)">
+            <summary>
+            在当前数据源中新增一项数据
+            </summary>
+            <param name="index">索引</param>
+            <param name="dataItem">新增的数据对象</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.MultiComboBase`1.GetPropertyValue``1(System.Func{`0,``0})">
+            <summary>
+            获取属性值
+            </summary>
+            <typeparam name="TProp"></typeparam>
+            <param name="selector"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboBase`1.DataItemCount">
+            <summary>
+            业务控件中数据项个数
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.BaseControl.MultiComboBase`1.AfterRefreshData">
+            <summary>
+            数据刷新之后发生
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.BaseControl.MultiComboBase`1.BeforeRefreshData">
+            <summary>
+            数据刷新之前发生
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboBase`1.DataSource">
+            <summary>
+            此属性对业务控件无效
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboBase`1.KeyName">
+            <summary>
+            数据源主键
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboBase`1.VisibleColumnIndexs">
+            <summary>
+            显示数据源列的对应索引
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.MultiComboAccountGroup.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.MultiComboAccountGroup.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.MultiComboAccountGroup.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboAccountGroup.GroupTypes">
+            <summary>
+            账户组类型
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboAccountGroup.OperRight">
+            <summary>
+            操作员权限
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboAccountGroup.GroupID">
+            <summary>
+            账户分组ID
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboAccountGroup.CompanyID">
+            <summary>
+            公司ID
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboAccountGroup.DeptID">
+            <summary>
+            公司部门ID
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboAccountGroup.DataSource">
+            <summary>
+            自定义数据源
+            </summary> 
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboAccountGroupType.FundLevel">
+            <summary>
+            账户组类型
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboAccountGroupType.DataSource">
+            <summary>
+            自定义数据源
+            </summary> 
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboAsset.Companyids">
+            <summary>
+            公司序号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboAsset.Deptids">
+            <summary>
+            部门序号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboAsset.FundID">
+            <summary>
+            账户序号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboAsset.GroupID">
+            <summary>
+            过滤账号组，表示列表只带出属性设置的账号组的资产单元。填写账号组，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboAsset.GroupType">
+            <summary>
+            过滤账户分组，表示列表只带出属性设置的账户分组的资产单元。填写账号组，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboAsset.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.MultiComboCombi">
+            <summary>
+            组合控件
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboCombi.PropertyStatus">
+            <summary>
+            账户状态
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboCombi.FundID">
+            <summary>
+            基金序号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboCombi.AssetID">
+            <summary>
+            资产单元序号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboCombi.PermitMarkets">
+            <summary>
+            允许投资的市场
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboCombi.FuturesInvestType">
+            <summary>
+            投资类型限制，组合允许投资的类型中包含列出来的投资类型，则会显示在组合列表中
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboCombi.GroupID">
+            <summary>
+            过滤账号组，表示列表只带出属性设置的账号组的资产单元。填写账号组，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboCombi.GroupType">
+            <summary>
+            过滤账户分组，表示列表只带出属性设置的账户分组的资产单元。填写账号组，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboCombi.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.MultiComboCompany.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.MultiComboCompany.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.MultiComboCompany.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboCompany.CompanyStatus">
+            <summary>
+            公司状态
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboCompany.CompanyType">
+            <summary>
+            公司类型
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.MultiComboDepartment.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.MultiComboDepartment.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.MultiComboDepartment.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboDepartment.CompanyID">
+            <summary>
+            公司编号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboDictionary.DictionaryNo">
+            <summary>
+            根据字典编号过滤字典项，带出指定字典编号的数据字典
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboDictionary.DicSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboEntrustDirection.InterCode">
+            <summary>
+            表示列表只带出当前证券的证券类别所有允许的委托方向列表(委托方向权限)。填写证券内码
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboEntrustDirection.StockTypeID">
+            <summary>
+            表示列表只带出当前证券类别所有允许的委托方向列表(委托方向权限)。填写证券类别编号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboEntrustDirection.MarketNo">
+            <summary>
+            表示列表只带出当前市场所有的委托方向列表。填写市场编号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboEntrustDirection.CombiID">
+            <summary>
+            表示列表只带出当前组合(支持多选，多选所有的委托方向列表。填写市场编号，支持多选
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboEntrustDirection.BusinType">
+            <summary>
+            根据委托方向的业务类别权限来过滤委托方向，只列出有业务类别权限的委托方向。填写业务类别编号，支持多选
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboEntrustDirection.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboFund.PropertyStatus">
+            <summary>
+            账户状态
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboFund.GroupID">
+            <summary>
+            账号组限制，基金允许账号组中包含列出来的账号组，则会显示在基金列表中
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboFund.GroupType">
+            <summary>
+            账户分组类型限制，基金允许账户分组类型中包含列出来的账户分组类型，则会显示在基金列表中
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboFund.CompanyID">
+            <summary>
+            公司ID
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboFund.DeptID">
+            <summary>
+            公司部门ID
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboFund.FundID">
+            <summary>
+            基金ID
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboFund.FundTypes">
+            <summary>
+            账户类型
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboFund.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboFund.EnableBranch">
+            <summary>
+            启用分仓，true只获取有分仓的账户，false获取所有
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboFund.GroupFa">
+            <summary>
+            是否分组估值
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboFund.InvestDirection">
+            <summary>
+            投资方向
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboMarket.MarketLimit">
+            <summary>
+            限制市场，限制当前输入的证券代码必须为指定市场的证券。填写市场编号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboMarket.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboOperator.PropertyStatus">
+            <summary>
+            账户状态
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboOperator.CompanyIds">
+            <summary>
+            公司编号，多个以逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboOperator.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboSeat.MainSeatID">
+            <summary>
+            AllSeat：根据主席位过滤当前席位列表 
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboSeat.MarketNo">
+            <summary>
+            根据市场过滤席位/交易席位列表
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboSeat.FundID">
+            <summary>
+            AllTradeSeat：根据基金来过滤交易席位列表。 
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboSeat.CombiIds">
+            <summary>
+            股东指定状态为 5-深交所托管时，在股东信息表的持仓席位为空，导致无法查询到席位，前台显示为空。 
+            对于这种情况，需要再传入组合编号，根据组合编号从组合席位关系表中获取seat_id，再根据seat_id从席位信息表中获取main_seat。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboSeat.BusinessClass">
+            <summary>
+            固定收益大宗业务支持
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboSeat.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboSeat.StockHolderIds">
+            <summary>
+            AllSeat：根据股东代码过滤当前席位列表
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboStockHolder.FundID">
+            <summary>
+            StockHolder：根据股东使用的基金权限来过滤股东列表，填写基金序号，支持多个过滤，以英文逗号分隔。 
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboStockHolder.CombiID">
+            <summary>
+             根据交易股东对应的组合来过滤交易股东列表，填写组合序号，支持多个过滤，以英文逗号分隔。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboStockHolder.MarketNo">
+            <summary>
+            根据股东所在的市场来过滤股东列表，填写市场编号，支持多个过滤，以英文逗号分隔。 
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboStockHolder.InvestType">
+            <summary>
+             根据股东使用投资类型来过滤股东列表，填写市投资类型，支持多个过滤，以英文逗号分隔。 
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboStockHolder.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.MultiComboStockType.RefreshDataInternal">
+            <summary>
+            刷新数据
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboStockType.MarketNo">
+            <summary>
+            过滤市场，表示列表只带出市场是属性设置的市场的证券类别。填写市场序号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboStockType.AssetClass">
+            <summary>
+            过滤资产类别，表示列表只带出资产类别是属性设置的资产类别的证券类别。填写资产类别序号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboStockType.CombiID">
+            <summary>
+            过滤组合，表示列表只带出组合上有此证券类别权限的证券类别。填写组合序号，支持多个过滤，以英文逗号分隔
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboStockType.ListMode">
+            <summary>
+            显示模式
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboStockType.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboTradeRival.MarketTypes">
+            <summary>
+            根据交易对手的市场类型过滤交易对手列表
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboTradeRival.OnlyValid">
+            <summary>
+            是否只显示正常的交易对手，缺省是False，表示显示所有交易对手
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboTradeRival.RivalTypes">
+            <summary>
+            交易对手分类
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.MultiComboTradeRival.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.PopExtender.controls">
+            <summary>
+            控件和对应属性的字典
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PopExtender.Pop(System.Windows.Forms.Control,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置控件的弹出控件，坐标和高宽
+            </summary>
+            <param name="control"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PopExtender.GetPopProperty(System.Windows.Forms.Control)">
+            <summary>
+            传入控件，返回该控件的属性类，并加入字典中。
+            </summary>
+            <param name="control"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.PopProperty">
+            <summary>
+            属性类
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.PopProperty.GripText">
+            <summary>
+            设置标题栏
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.PopGrip">
+            <summary>
+            标签类
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.PopGrip.downPoint">
+            <summary>
+            第一次按下的坐标
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.PopGrip.isFirstClick">
+            <summary>
+            记录是否第一次点击
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.PopGrip.downRectangle">
+            <summary>
+            按下鼠标时的大小
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.PopGrip.lastRectangle">
+            <summary>
+            最后的大小
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.PopGrip.lastLocation">
+            <summary>
+            最后的坐标
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PopGrip.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PopGrip.doubleClickTimer_Tick(System.Object,System.EventArgs)">
+            <summary>
+            timer事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PopGrip.Pop(System.Drawing.Point,System.Drawing.Size)">
+            <summary>
+            show出弹窗
+            </summary>
+            <param name="point"></param>
+            <param name="size"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PopGrip.Dispose(System.Boolean)">
+            <summary>
+            注销事件
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PopGrip.parentContainer_VisibleChanged(System.Object,System.EventArgs)">
+            <summary>
+            弹窗的显示属性和父窗口属性一致
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PopGrip.OnDoubleClick(System.EventArgs)">
+            <summary>
+            双击打开弹窗
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PopGrip.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标按下开启计时器。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PopGrip.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标弹起停止计时器。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PopGrip.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            鼠标移动，
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PopGrip.popForm_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)">
+            <summary>
+            窗体关闭
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.PopGrip.DockGrip">
+            <summary>
+            判断当前控件所存放的位置，鼠标拖动标题栏，出现上下左右矩形，鼠标存放在不同的矩形里面，窗体dock类型改变。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PopGrip.DockGrip.GetDockStyle">
+             <summary>
+            根据鼠标的位置来判断dockstyle的值
+             </summary>
+             <returns>DockStyle</returns>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.PopGrip.PopForm">
+            <summary>
+            弹出框
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.FormPub.SkinBase">
+            <summary>
+            窗体基类
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.FormPub.SkinBase.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.FormPub.SkinBase.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.FormPub.SkinBase.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.PopGrip.PopForm.NCLBUTTONDBLCLK">
+            <summary>
+            双击后关闭窗口
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.PrintControl">
+            <summary>
+            打印控件
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PrintControl.OnDisposed(System.Object,System.EventArgs)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PrintControl.PrintDocumentOnPrintPage(System.Object,System.Drawing.Printing.PrintPageEventArgs)">
+            <summary>
+            绘制打印内容
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PrintControl.CbbZoomOnValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            缩放
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PrintControl.BtnPrintOnClick(System.Object,System.EventArgs)">
+            <summary>
+            打印
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PrintControl.BtnSaveAsOnClick(System.Object,System.EventArgs)">
+            <summary>
+            另存为
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PrintControl.RegisterOcx">
+            <summary>
+            注册OCX
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PrintControl.BindingComboBox">
+            <summary>
+            绑定打印机列表
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PrintControl.GetPrinters">
+            <summary>
+            获取打印机列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PrintControl.GetZooms">
+            <summary>
+            获取放大缩小比例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PrintControl.LoadDocument">
+            <summary>
+            加载文档
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PrintControl.SaveByStream">
+            <summary>
+            根据字节流保存
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PrintControl.SaveByFileName">
+            <summary>
+            根据文件路径保存
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PrintControl.CreateTempAndOpen(Aspose.Words.Document)">
+            <summary>
+            创建临时文件并打开
+            </summary>
+            <param name="doc"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PrintControl.SaveAs">
+            <summary>
+            另存为
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.PrintControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PrintControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PrintControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.PrintControl.DefaultPrinter">
+            <summary>
+            默认打印机名称
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.PrintControl.FileName">
+            <summary>
+            获取或设置打印文件路径
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.PrintControl.DocumentFormat">
+            <summary>
+            获取或设置打印文档格式
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.PrintControl.Stream">
+            <summary>
+            设置打印文件流
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.PrintControl.StreamBuffer">
+            <summary>
+            获取或设置打印文件字节流
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.PrintControl.DataMode">
+            <summary>
+            获取或设置数据使用模式，1-文件路径 2-数据流
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.DataMode">
+            <summary>
+            数据使用模式
+            1-文件路径 2-数据流
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.DocumentFormat">
+            <summary>
+            文档格式
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.Print.PrintButton.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.Print.PrintButton.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.Print.PrintButton.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.Print.PrintButton.Printer">
+            <summary>
+            打印器
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.Print.ToolStripPrintButton.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.Print.ToolStripPrintButton.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.Print.ToolStripPrintButton.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.BaseControl.Print.ToolStripPrintButton.DataSourceControl">
+            <summary>
+            需要打印的数据源控件
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.IpropertyStatus">
+            <summary>
+            供基类调用接口
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.FundRightStatus.SetCheckedItem(Hundsun.Framework.Common.BaseEnum)">
+            <summary>
+            选中项
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.FundRightStatus.ClearSelected">
+            <summary>
+            取消所有勾选的项
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.FundRightStatus.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.FundRightStatus.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.FundRightStatus.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PropertyFundStatus.SetCheckedItem(Hundsun.Framework.BizControls.BaseControl.PropertyStatus)">
+            <summary>
+            选中项
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PropertyFundStatus.ClearSelected">
+            <summary>
+            取消所有勾选的项
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.PropertyFundStatus.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PropertyFundStatus.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.PropertyFundStatus.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.PropertyStatus">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.PropertyStatus.Normal">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.PropertyStatus.Cancel">
+            <summary>
+            注销
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.PropertyStatus.Frozen">
+            <summary>
+            冻结
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.FundStatusEditor">
+            <summary>
+            账户状态
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.StatusEditor`1">
+            <summary>
+            承载复选框界面的基类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.FundRightEditor">
+            <summary>
+            账户权限
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.StockCodeListMode">
+            <summary>
+            证券代码显示模式
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.StockCodeListMode.All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.StockCodeListMode.Common">
+            <summary>
+            常用证券
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.BaseControl.StockTypeListMode">
+            <summary>
+            证券类别显示模式
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.StockTypeListMode.All">
+            <summary>
+            显示全部
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.BaseControl.StockTypeListMode.OperatorRights">
+            <summary>
+            有操作权限
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.Win32.SetParent(System.IntPtr,System.IntPtr)">
+            <summary>
+            该函数改变指定子窗口的父窗口。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.Win32.ShowWindow(System.IntPtr,System.Int32)">
+            <summary>
+            该函数设置指定窗口的显示状态。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.Win32.SetWindowPos(System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt32)">
+            <summary>
+            该函数改变一个子窗口，弹出式窗口式顶层窗口的尺寸，位置和Z序。
+            </summary> 
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.BaseControl.Win32.SendMessage(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            该函数将指定的消息发送到一个或多个窗口。此函数为指定的窗口调用窗口程序，直到窗口程序处理完消息再返回。　
+            </summary>
+            <param name="hWnd">其窗口程序将接收消息的窗口的句柄</param>
+            <param name="msg">指定被发送的消息</param>
+            <param name="wParam">指定附加的消息指定信息</param>
+            <param name="lParam">指定附加的消息指定信息</param>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.ComboInvestType">
+            <summary>
+            投资类型
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ComboInvestType.RefreshData(System.String)">
+            <summary>
+            刷新数据源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.ComboInvestType.CombiID">
+            <summary>
+            组合编号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.ComboInvestType.IsValid">
+            <summary>
+            是否有效
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.EntrustDirctionEX.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.EntrustDirctionEX.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.EntrustDirctionEX.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.EntrustDirctionEX.StockChangeDirecition">
+            <summary>
+            表示列表只带出当前证券的证券类别所有允许的委托方向列表(委托方向权限)。填写证券内码
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.EntrustDirctionEX.CashChangeDirection">
+            <summary>
+            表示列表只带出当前证券的证券类别所有允许的委托方向列表(委托方向权限)。填写证券内码
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.EntrustDirctionEX.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.MultiComboInvestType">
+            <summary>
+            投资类型
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.MultiComboInvestType.RefreshData(System.String)">
+            <summary>
+            刷新数据源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.MultiComboInvestType.CombiID">
+            <summary>
+            组合编号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.MultiComboInvestType.IsValid">
+            <summary>
+            是否有效
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.MultiEntrustDirctionEX.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.MultiEntrustDirctionEX.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.MultiEntrustDirctionEX.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.MultiEntrustDirctionEX.StockChangeDirecition">
+            <summary>
+            表示列表只带出当前证券的证券类别所有允许的委托方向列表(委托方向权限)。填写证券内码
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.MultiEntrustDirctionEX.CashChangeDirection">
+            <summary>
+            表示列表只带出当前证券的证券类别所有允许的委托方向列表(委托方向权限)。填写证券内码
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.MultiEntrustDirctionEX.DataSource">
+            <summary>
+            自定义数据源
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.O4GridControl.O4GridControl_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            控件重绘事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.O4GridControl.InitMainView">
+            <summary>
+            初始化主表样式
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.O4GridControl.mainView_MasterRowExpanded(System.Object,DevExpress.XtraGrid.Views.Grid.CustomMasterRowEventArgs)">
+            <summary>
+            从表展开事件-初始化从表
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.O4GridControl.InitDetailView(DevExpress.XtraGrid.Views.Grid.GridView)">
+            <summary>
+            初始化从表样式
+            </summary>
+            <param name="detail"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.O4GridControl.RenderMasterHeader(System.Windows.Forms.PaintEventArgs,DevExpress.XtraGrid.Views.Grid.GridView)">
+            <summary>
+            渲染表头
+            </summary>
+            <param name="e"></param>
+            <param name="view"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.O4GridControl.GetColumnPanelHeight">
+            <summary>
+            获取列表头高度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.O4GridControl.InitScroll">
+            <summary>
+            初始化滚动条
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.O4GridControl.RenderScorll(DevExpress.XtraGrid.Views.Grid.GridView)">
+            <summary>
+            渲染滚动条
+            </summary>
+            <param name="view"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.O4GridControl.RenderScorll(DevExpress.XtraGrid.Scrolling.ScrollInfo)">
+            <summary>
+            渲染滚动条
+            </summary>
+            <param name="scrollInfo"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.O4GridControl.scrollInfo_VScroll_ValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            滚动条位置改变事件-需要重新渲染滚动条
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.O4GridControl.GetValue``1(``0,System.String)">
+            <summary>
+            反射获取私有属性值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="view"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.O4GridControl.useCustomTheme">
+            <summary>
+            是否启用系统主题样式
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.O4GridControl.CustomTheme">
+            <summary>
+            是否启用系统主题样式
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.O4GridControl.HSTheme">
+            <summary>
+            获取或设置系统主题样式
+            </summary> 
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.ControlExt.O4ImageButton">
+            <summary>
+            图片按钮
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlExt.O4ImageButton._title">
+            <summary>
+            获取或设置提示
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlExt.O4ImageButton.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.O4ImageButton.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.O4ImageButton.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.ControlExt.O4ImageButton.ImageNormal">
+            <summary>
+            获取或设置正常显示图片
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.ControlExt.O4ImageButton.ImageHover">
+            <summary>
+            获取或设置鼠标悬停时图片
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.ControlExt.O4ImageButton.ImagePressed">
+            <summary>
+            获取或设置鼠标按下时图片
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlExt.O4LabelText.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.O4LabelText.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.O4LabelText.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.O4MenuStrip.SetMenuItem``1(``0)">
+            <summary>
+            设置菜单项
+            </summary>
+            <param name="hstsMenuitem"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.O4MenuStrip.SetToolStripItem(System.Windows.Forms.ToolStripItem)">
+            <summary>
+            设置项的样式
+            </summary>
+            <param name="tsItem"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.O4TreeList.DrawNormalButton(System.Drawing.Graphics,System.Nullable{System.Drawing.Rectangle})">
+            <summary>
+            绘制正常的按钮样式
+            </summary>
+            <param name="g"></param>
+            <param name="rect"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.O4TreeList.DrawHoverButton(System.Drawing.Graphics,System.Nullable{System.Drawing.Rectangle})">
+            <summary>
+            绘制鼠标经过的按钮样式
+            </summary>
+            <param name="g"></param>
+            <param name="rect"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.O4TreeList.CalcActionRect(System.Drawing.Rectangle,System.Drawing.Image,System.Int32)">
+            <summary>
+            计算图像位置
+            </summary>
+            <param name="rect">需要绘制图像的树节点位置</param>
+            <param name="image"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.O4TreeList.GetPositionIndex(System.Int32)">
+            <summary>
+            获取位置索引
+            </summary>
+            <param name="index">0.新增 1.更新 2.删除</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.O4TreeList.CalcNodeRect">
+            <summary>
+            计算当前选中节点的位置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.O4TreeList.OnAddClick">
+            <summary>
+            新增按钮点击
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.O4TreeList.OnUpdateClick">
+            <summary>
+            更新按钮点击
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.O4TreeList.OnDeleteClick">
+            <summary>
+            删除按钮点击
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.ControlExt.O4UserLogin">
+            <summary>
+            登录：用户名控件
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.O4UserLogin.#ctor">
+            <summary>
+            登录：用户名控件
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.O4UserLogin.SelectAll">
+            <summary>
+            选定文本框中的所有文本。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.O4UserLogin.HideListView">
+            <summary>
+            隐藏下拉列表
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.O4UserLogin.InitListView">
+            <summary>
+            初始化列表视图
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.O4UserLogin.RefreshListView">
+            <summary>
+            更新下拉列表数据
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlExt.O4UserLogin.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.O4UserLogin.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.O4UserLogin.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.ControlExt.O4UserLogin.OnClear">
+            <summary>
+            清除历史事件触发
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.ControlExt.O4UserLogin.OnShowDropDownList">
+            <summary>
+            显示下拉控件事件
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.ControlExt.O4UserLogin.DataSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.ControlExt.O4UserLogin.Text">
+            <summary>
+            文本
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.ControlExt.O4UserLogin.AutoSize">
+            <summary>
+            此属性不能设置，否则无法显示下来框
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.ControlExt.O4UserLogin.DropdownMagin">
+            <summary>
+            获取或设置下拉框与控件之间的间距
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.ControlExt.PasswordStrengthVerification">
+            <summary>
+            密码强度验证
+            1.非常弱—— 长度小于6个
+            2.弱—— 纯数字或纯字母大于5个
+            3.一般—— 数字+字母大于5个小于8个
+            4.强—— 数字+字母+其他字符 大于5个小于8个
+            5.安全—— 数字+字母+其他字符 大于8个小于12个
+            6.超安全—— 数字+字母+其他字符 大于12个
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.PasswordStrengthVerification.SetBackgroundColor(System.String)">
+            <summary>
+            设置不同的背景色
+            </summary>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.PasswordStrengthVerification.SetLabelColor(System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            设置不同Label背景色
+            </summary> 
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.PasswordStrengthVerification.SetLabelFont(System.Drawing.Font)">
+            <summary>
+            设置不同Label字体
+            </summary> 
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.PasswordStrengthVerification.SetBackground(System.String)">
+            <summary>
+            设置不同的背景色
+            </summary>
+            <param name="value">值</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.PasswordStrengthVerification.IsNumber(System.String)">
+            <summary>
+            检测是否纯数字
+            </summary>
+            <param name="input">输入内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.PasswordStrengthVerification.IsNumberAndChar(System.String)">
+            <summary>
+            检测是否字母和数字组合
+            </summary>
+            <param name="input">输入内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.PasswordStrengthVerification.IsChar(System.String)">
+            <summary>
+            检测是否字母
+            </summary>
+            <param name="input">输入内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.PasswordStrengthVerification.IsAll(System.String)">
+            <summary>
+            检测是否字母、数字和下划线组合
+            </summary>
+            <param name="input">输入内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.PasswordStrengthVerification.OnPaint(System.Drawing.Graphics,System.Windows.Forms.Control,System.Boolean)">
+            <summary>
+            绘制圆角Label
+            </summary>
+            <param name="g"></param>
+            <param name="control"></param>
+            <param name="isLeft"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.PasswordStrengthVerification.DrawBorder(System.Drawing.Graphics,System.Drawing.Rectangle,HSUCF.Controls.RoundStyle,System.Int32,System.Drawing.Color,System.Int32,System.Windows.Forms.Control,System.Boolean)">
+            <summary>
+            绘制边框
+            </summary>
+            <param name="g"></param>
+            <param name="rect"></param>
+            <param name="roundStyle"></param>
+            <param name="radius"></param>
+            <param name="borderColor"></param>
+            <param name="borderSize"></param>
+            <param name="ctrl"></param>
+            <param name="isLeft"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.PasswordStrengthVerification.GetRegion(HSUCF.Controls.RoundStyle,System.Int32,System.Windows.Forms.Control)">
+            <summary>
+            获取控件轮廊
+            </summary>
+            <param name="roundStyle"></param>
+            <param name="radius">半径大小</param>
+            <param name="ctrl"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlExt.PasswordStrengthVerification.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.PasswordStrengthVerification.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlExt.PasswordStrengthVerification.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.TextBoxWater.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.TextBoxWater.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.TextBoxWater.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.CommonControl.LabelTextBoxColorSelector.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.CommonControl.LabelTextBoxColorSelector.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.CommonControl.LabelTextBoxColorSelector.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.CommonControl.LabelTextBoxPathSelector.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.CommonControl.LabelTextBoxPathSelector.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.CommonControl.LabelTextBoxPathSelector.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.ControlBuilder.ControlBuilderBase`1.isSkipFirstCheck">
+            <summary>
+            第一次加载时是否跳过有效性检查
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ControlBuilder.ControlBuilderBase`1.Build(Hundsun.Framework.BizControls.ControlManager.ControlNode)">
+            <summary>
+            构造控件
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ControlBuilder.ControlBuilderBase`1.SetBackColor(`0,System.Drawing.Color)">
+            <summary>
+            设置控件背景颜色，有些控件重写了背景色，用Control设置背景色不行
+            </summary>
+            <param name="control"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ControlBuilder.ControlBuilderBase`1.BuildUnique(Hundsun.Framework.BizControls.ControlManager.ControlNode)">
+            <summary>
+            构建控件的特有的属性
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ControlBuilder.ControlBuilderBase`1.SetControlValue(`0,System.String)">
+            <summary>
+            设置控件值
+            </summary>
+            <param name="control"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ControlBuilder.ControlBuilderBase`1.RegisterValueChangedHandler(`0,System.Action{System.String})">
+            <summary>
+            注册控件值改变事件处理函数
+            </summary>
+            <param name="control"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ControlBuilder.ControlBuilderBase`1.IsValid(System.String)">
+            <summary>
+            控件的值是否有效
+            </summary>
+            <param name="controlValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ControlBuilder.ControlBuilderBase`1.GetRangeDict(System.String,System.Char,System.Char)">
+            <summary>
+            根据分隔符获取值域字典
+            </summary>
+            <param name="range">值域</param>
+            <param name="itemSeparator">条目分隔符</param>
+            <param name="keyValueSeparator">键值对分隔符</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ControlBuilder.BooleanControlBuilder.SetBackColor(HSUCF.Controls.hsCheckBox,System.Drawing.Color)">
+            <summary>
+            此控件重写了背景色，必须重载
+            </summary>
+            <param name="control"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ControlValue.AsOriginal">
+            <summary>
+            将当前值作为原始值
+            </summary>
+        </member>
+        <member name="E:Hundsun.Framework.BizControls.ControlManager.ControlValue.OnStateChanged">
+            <summary>
+            值的状态改变
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.ControlManager.ControlType">
+            <summary>
+            控件类型
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.ControlType.SingleSelect">
+            <summary>
+            单选
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.ControlType.MultiSelect">
+            <summary>
+            多选
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.ControlType.Integer">
+            <summary>
+            整数
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.ControlType.Float">
+            <summary>
+            浮点数
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.ControlType.String">
+            <summary>
+            字符串
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.ControlType.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.ControlType.Time">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.ControlType.Color">
+            <summary>
+            颜色
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.ControlType.Boolean">
+            <summary>
+            布尔值
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.ControlType.File">
+            <summary>
+            文件
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.ControlType.SaveFile">
+            <summary>
+            保存文件
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.ControlType.Folder">
+            <summary>
+            文件夹
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.ControlType.ComboFund">
+            <summary>
+            账户控件
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.ControlType.ComboStockType">
+            <summary>
+            证券类别
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.ControlType.ComboAsset">
+            <summary>
+            资产单元
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.ControlManager.ControlType.Container">
+            <summary>
+            其他控件的容器
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.ControlManager.ViewModelBase">
+            <summary>
+            视图模型基类
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ViewModelBase.InitControlNodeList">
+            <summary>
+            初始化控件节点列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ViewModelBase.GetControlType(System.String)">
+            <summary>
+            获取控件类型
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ViewModelBase.GetRootNodes">
+            <summary>
+            获取根节点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ViewModelBase.GetChildNodes(Hundsun.Framework.BizControls.ControlManager.ControlNode)">
+            <summary>
+            获取子节点
+            </summary>
+            <param name="parentNode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ViewModelBase.GetRootNodeByIndex(System.Int32)">
+            <summary>
+            通过索引获取根节点
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ViewModelBase.GetNodeById(System.String)">
+            <summary>
+            通过编号获取节点
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ViewModelBase.GetChangedNodes">
+            <summary>
+            获取数值改变过的节点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ViewModelBase.Undo">
+            <summary>
+            撤销
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ViewModelBase.GetValidValue(System.String)">
+            <summary>
+            获取有效的数据库值  数据库不允许为空
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ViewModelBase.IsValid(System.Collections.Generic.IEnumerable{Hundsun.Framework.BizControls.ControlManager.ControlNode},System.String@)">
+            <summary>
+            校验节点值
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.ControlManager.ViewModelBase.IsValid(Hundsun.Framework.BizControls.ControlManager.ControlNode,System.String@)">
+            <summary>
+            校验节点值
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.FormPub.AddinBase">
+            <summary>
+            插件基类
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.FormPub.AddinBase.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.FormPub.AddinBase.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.FormPub.AddinBase.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.FormPub.AddinBase.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutManager.AddItem(System.String,System.Boolean)">
+            <summary>
+            添加数据
+            </summary>
+            <param name="name"></param>
+            <param name="isDefault"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutManager.GvMainOnCustomUnboundColumnData(System.Object,DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs)">
+            <summary>
+            自定义非数据绑定列事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutManager.GvMainOnRowCellClick(System.Object,DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs)">
+            <summary>
+            Cell点击事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutManager.GvMainOnCellValueChanged(System.Object,DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs)">
+            <summary>
+            Cell值更改事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutManager.btnDel_Click(System.Object,System.EventArgs)">
+            <summary>
+            删除
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutManager.btnClose_Click(System.Object,System.EventArgs)">
+            <summary>
+            取消
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.FrmLayoutManager.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutManager.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutManager.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.FrmLayoutManager.DefaultName">
+            <summary>
+            获取默认布局的名称
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.GridLayout.FrmLayoutManager.ListItem">
+            <summary>
+            列表实体
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.GridLayout.FrmLayoutSetting">
+            <summary>
+            布局设置
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutSetting.LoadGridLayout">
+            <summary>
+            加载数据到布局对话框
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutSetting.DataBind">
+            <summary>
+            数据绑定
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutSetting.Change(System.Int32,System.Int32)">
+            <summary>
+            交换数据
+            </summary>
+            <param name="current"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutSetting.GvMainOnCustomUnboundColumnData(System.Object,DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs)">
+            <summary>
+            自定义非数据绑定列事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutSetting.GvMainOnRowCellClick(System.Object,DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs)">
+            <summary>
+            Cell点击事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutSetting.btnOK_Click(System.Object,System.EventArgs)">
+            <summary>
+            确定
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutSetting.btnCancel_Click(System.Object,System.EventArgs)">
+            <summary>
+            取消
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutSetting.btnUp_Click(System.Object,System.EventArgs)">
+            <summary>
+            上移
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutSetting.btnDown_Click(System.Object,System.EventArgs)">
+            <summary>
+            下移
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutSetting.btnBackColor_Click(System.Object,System.EventArgs)">
+            <summary>
+            选择颜色
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.FrmLayoutSetting.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutSetting.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.FrmLayoutSetting.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.FrmLayoutSetting.GrideLayout">
+            <summary>
+            获取当前布局对象
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.GridLayout.ColumnTag">
+            <summary>
+            列Tag, 帮定到GridView的列，监听列的位置发生变化的事件。
+            <remark>后续需要改进，不能占用GridView列的Tag属性，以免与其它开发者冲突</remark>
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.ColumnTag.Caption">
+            <summary>
+            原名
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.ColumnTag.Index">
+            <summary>
+            绝对下标
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.ColumnTag.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.ColumnTag.RealIndex">
+            <summary>
+            真实下标
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.ColumnTag.Alias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.ColumnTag.Visible">
+            <summary>
+            是否可见
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.ColumnTag.VisibleIndex">
+            <summary>
+            可视下标
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.GridLayout.LayoutManager">
+            <summary>
+            布局管理类。由该类完成对GridView布局的设置、获取等操作。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManager.#ctor(DevExpress.XtraGrid.Views.Grid.GridView,System.String,System.String,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="gridView"></param>
+            <param name="layoutKey1">布局一级标识符</param>
+            <param name="layoutKey2">布局二级标识符</param>
+            <param name="operatorNO">操作员编号</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManager.GetCurrentLayout">
+            <summary>
+            获得当前控件的布局对象
+            </summary>
+            <returns>布局对象</returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManager.GridView_ColumnPositionChanged(System.Object,System.EventArgs)">
+            <summary>
+            监听GridView列的位置变化
+            </summary>
+            <param name="sender">GrideView的列对象</param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManager.Init">
+            <summary>
+            给MainView添加Tag，添加监听函数
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManager.LoadLayout(Hundsun.Framework.BizControls.GridLayout.LayoutType,System.String)">
+            <summary>
+            客户端打开时调用此函数加载布局
+            </summary>
+            <param name="gltType"></param>
+            <param name="strLayoutName"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManager.SetLayout(Hundsun.Framework.BizControls.GridLayout.Layout)">
+            <summary>
+            设置布局
+            </summary>
+            <param name="layout">布局对象</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManager.UnInit">
+            <summary>
+            反初始化。可以在页面关闭时，调用此函数来保存页面关闭时的布局
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManager.AddColumnTag">
+            <summary>
+            给GridView添加Tag
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManager.AjustLayout(Hundsun.Framework.BizControls.GridLayout.Layout)">
+            <summary>
+            给控件设置当前布局对象
+            </summary>
+            <param name="layout">The layout.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManager.AjustRealIndex(DevExpress.XtraGrid.Columns.GridColumn)">
+            <summary>
+            列的位置发生变化时，做调整
+            </summary>
+            <param name="Clm"></param>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.LayoutManager.LayoutOperator">
+            <summary>
+            布局操作者。完成从后台获取布局数据、保存布局到后台等操作。
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton">
+            <summary>
+            布局管理按钮
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton._gridControl">
+            <summary>
+            The grid control
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton._layoutKey1">
+            <summary>
+            The layout key1
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton._layoutKey2">
+            <summary>
+            The layout key2
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton._layoutManager">
+            <summary>
+            The grid LM
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton._operatorNO">
+            <summary>
+            The operatorno
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton"/> class.
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.Init">
+            <summary>
+            初始化
+            </summary>
+            <returns><p>false 传给布局管理控件的必需设置的属性没有设置， 这里不抛出异常</p> <p>true 成功</p> </returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.UnInit">
+            <summary>
+            返初始化。如果要保存页面关闭时GridView的布局，请调用该函数，否则可不调用。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.btnDown_Click(System.Object,System.EventArgs)">
+            <summary>
+            布局选择收藏下拉菜单
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.btnSet_Click(System.Object,System.EventArgs)">
+            <summary>
+            布局设置对话框
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.tsmiManage_Click(System.Object,System.EventArgs)">
+            <summary>
+            弹出布局管理对话框
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.tsmiOriginal_Click(System.Object,System.EventArgs)">
+            <summary>
+            加载缺省布局
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.tsmiSave_Click(System.Object,System.EventArgs)">
+            <summary>
+            收藏当前布局
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.tsmiSavedDefault_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the tsmiSavedDefault control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.GridControl">
+            <summary>
+            相关联的GridControl控件
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.LayoutKey1">
+            <summary>
+            GridView的一级标识符, 一般为页面标识符
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.LayoutKey2">
+            <summary>
+            GridView的二级标识符, 一般为Grid的名称标识符
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.OperatorNO">
+            <summary>
+            操作员编号。可以从在运行时， 从内存表中获取, 并设置。
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.LayoutName">
+            <summary>
+            布局管理页面,修改布局的名称等
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.LayoutName._layoutOperator">
+            <summary>
+            The layout operator
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.LayoutName.#ctor(Hundsun.Framework.BizControls.GridLayout.LayoutOperator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.LayoutName"/> class.
+            </summary>
+            <param name="layoutOperator">The layout operator.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.LayoutName.DefaultLayoutChangedHandler(System.String,System.Boolean)">
+            <summary>
+            Defaults the layout changed handler.
+            </summary>
+            <param name="layoutName">Name of the layout.</param>
+            <param name="isSet">if set to <c>true</c> [is set].</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.LayoutName.DelLayoutHandler(System.String)">
+            <summary>
+            Dels the layout handler.
+            </summary>
+            <param name="layoutName">Name of the layout.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutManagerButton.LayoutName.LayoutNameChangedHandler(System.String,System.String)">
+            <summary>
+            Layouts the name changed handler.
+            </summary>
+            <param name="layoutName">Name of the layout.</param>
+            <param name="layoutNewName">New name of the layout.</param>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.GridLayout.LayoutType">
+            <summary>
+            布局类型
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.LayoutType.ltNone">
+            <summary>
+            无 all
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.LayoutType.ltOriginal">
+            <summary>
+            缺省，客户端设计时的布局
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.LayoutType.ltDefault">
+            <summary>
+            默认，用户设置的默认布局
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.LayoutType.ltSave">
+            <summary>
+            用户保存的布局
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.LayoutType.ltLast">
+            <summary>
+            最后一次使用的布局
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.GridLayout.Layout">
+            <summary>
+            布局
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.Layout.SortByRealIndex">
+            <summary>
+            以列的可视下标，从小到大排序
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.Layout.ComparisonByRealIndex(Hundsun.Framework.BizControls.GridLayout.LayoutColumn,Hundsun.Framework.BizControls.GridLayout.LayoutColumn)">
+            <summary>
+            列排序函数
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.Layout.HightLightColor">
+            <summary>
+            隔行高亮颜色
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.Layout.IsHightLight">
+            <summary>
+            是否隔行高亮
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.Layout.LayoutKey1">
+            <summary>
+            一级标识符
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.Layout.LayoutKey2">
+            <summary>
+            二级标识符
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.Layout.LeftFixedCols">
+            <summary>
+            左固定列个数
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.Layout.Name">
+            <summary>
+            布局名称
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.Layout.OperatorNO">
+            <summary>
+            操作员编号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.Layout.RightFixedCols">
+            <summary>
+            右固定列个数
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.Layout.Type">
+            <summary>
+            是否为默认 为以后扩展使用 0:save 1:default 2:original 3:Last 4：all
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.GridLayout.LayoutColumn">
+            <summary>
+            布局列
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.LayoutColumn.Caption">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.LayoutColumn.Index">
+            <summary>
+            设计时下标
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.LayoutColumn.Name">
+            <summary>
+            列名
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.LayoutColumn.RealIndex">
+            <summary>
+            可视下标
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.LayoutColumn.Alias">
+            <summary>
+            别名(有别名时则显示别名)
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.LayoutColumn.Visible">
+            <summary>
+            可见
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.LayoutColumn.Width">
+            <summary>
+            宽度
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.GridLayout.LayoutInfo">
+            <summary>
+            布局信息
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.LayoutInfo.LayoutKey1">
+            <summary>
+            一级标识符
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.LayoutInfo.LayoutKey2">
+            <summary>
+            二级标识符
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.LayoutInfo.Name">
+            <summary>
+            布局名称
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.LayoutInfo.OperatorNO">
+            <summary>
+            操作员编号
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.LayoutInfo.Type">
+            <summary>
+            是否为默认 为以后扩展使用 0:save 1:default 2:original 3:Last 4：all
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutOperator.Add(Hundsun.Framework.BizControls.GridLayout.Layout)">
+            <summary>
+            新增一个布局
+            </summary>
+            <param name="layout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutOperator.AddOrReplace(Hundsun.Framework.BizControls.GridLayout.Layout)">
+            <summary>
+            新增或者替换一个布局
+            </summary>
+            <param name="layout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutOperator.Del(System.String)">
+            <summary>
+            根据名称删除一个布局
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutOperator.Update(Hundsun.Framework.BizControls.GridLayout.Layout)">
+            <summary>
+            更新一个布局
+            </summary>
+            <param name="layout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutOperator.Get(System.String)">
+            <summary>
+            根据合称或者一个布局
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutOperator.GetAllInfo">
+            <summary>
+            获取所有的布局
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutOperator.GetDefault">
+            <summary>
+            获取默认布局
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutOperator.GetLast">
+            <summary>
+            获取客户端关闭时的布局,但实际使用场景中用不到，当前不保存到数据库，只保存到内存中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutOperator.GetOriginal">
+            <summary>
+            获取客户端设计时的布局，不保存到数据库中，只保存到内存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutOperator.ReName(System.String,System.String)">
+            <summary>
+            更改布局名称
+            </summary>
+            <param name="name"></param>
+            <param name="newName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutOperator.SetDefault(System.String,System.Boolean)">
+            <summary>
+            设置默认布局
+            </summary>
+            <param name="name">布局名称</param>
+            <param name="isDefault"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutOperator.SetLast(Hundsun.Framework.BizControls.GridLayout.Layout)">
+            <summary>
+            设置客户端关闭时的布局,但实际使用场景中用不到,所以当前不保存到数据库
+            </summary>
+            <param name="lastLayout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutOperator.SetOriginal(Hundsun.Framework.BizControls.GridLayout.Layout)">
+            <summary>
+            设置客户端户端设计时的缺省布局
+            </summary>
+            <remark>
+            不保存到数据库中，只保存到内存
+            </remark>
+            <param name="originalLayout"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.GridLayout.LayoutSetDialog">
+            <summary>
+            布局设置对话框
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutSetDialog.#ctor(Hundsun.Framework.BizControls.GridLayout.Layout)">
+            <summary>
+            布局对象
+            </summary>
+            <param name="gridLayout"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutSetDialog.SwapRow(System.Int32,System.Int32)">
+            <summary>
+            交换两行记录的值
+            </summary>
+            <param name="leftIndex"></param>
+            <param name="rightIndex"></param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutSetDialog.btnMoveUp_Click(System.Object,System.EventArgs)">
+            <summary>
+            向上移
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutSetDialog.btnMoveDownload_Click(System.Object,System.EventArgs)">
+            <summary>
+            向下移
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutSetDialog.LoadGridLayout">
+            <summary>
+            加载数据到布局对话框
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.LayoutSetDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutSetDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.LayoutSetDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.LayoutSetDialog.GrideLayout">
+            <summary>
+            获取当前布局对象
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.GridLayout.SaveLayoutDialog">
+            <summary>
+            保存布局对话框
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.SaveLayoutDialog.strList">
+            <summary>
+            已经存的布局名称列表
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.SaveLayoutDialog.AddLayoutName(System.String)">
+            <summary>
+            添加布局名称
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.SaveLayoutDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.SaveLayoutDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.SaveLayoutDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.SaveLayoutDialog.LayoutName">
+            <summary>
+            布局名称
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.SaveLayoutDialog.IsDefault">
+            <summary>
+            是否为默认
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton._gridControl">
+            <summary>
+            The grid control
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton._layoutKey1">
+            <summary>
+            The layout key1
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton._layoutKey2">
+            <summary>
+            The layout key2
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton._layoutManager">
+            <summary>
+            The grid LM
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton._operatorNO">
+            <summary>
+            The operatorno
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.Init">
+            <summary>
+            初始化
+            </summary>
+            <returns><p>false 传给布局管理控件的必需设置的属性没有设置， 这里不抛出异常</p> <p>true 成功</p> </returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.UnInit">
+            <summary>
+            返初始化。如果要保存页面关闭时GridView的布局，请调用该函数，否则可不调用。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.OnClick(System.EventArgs)">
+            <summary>
+            布局选择收藏下拉菜单
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.OnButtonClick(System.EventArgs)">
+            <summary>
+            布局设置对话框
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.tsmiManage_Click(System.Object,System.EventArgs)">
+            <summary>
+            弹出布局管理对话框
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.tsmiOriginal_Click(System.Object,System.EventArgs)">
+            <summary>
+            加载缺省布局
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.tsmiSave_Click(System.Object,System.EventArgs)">
+            <summary>
+            收藏当前布局
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.tsmiSavedDefault_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the tsmiSavedDefault control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.GridControl">
+            <summary>
+            相关联的GridControl控件
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.LayoutKey1">
+            <summary>
+            GridView的一级标识符, 一般为页面标识符
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.LayoutKey2">
+            <summary>
+            GridView的二级标识符, 一般为Grid的名称标识符
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.OperatorNO">
+            <summary>
+            操作员编号。可以从在运行时， 从内存表中获取, 并设置。
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.LayoutName">
+            <summary>
+            布局管理页面,修改布局的名称等
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.LayoutName._layoutOperator">
+            <summary>
+            The layout operator
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.LayoutName.#ctor(Hundsun.Framework.BizControls.GridLayout.LayoutOperator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.LayoutName"/> class.
+            </summary>
+            <param name="layoutOperator">The layout operator.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.LayoutName.DefaultLayoutChangedHandler(System.String,System.Boolean)">
+            <summary>
+            Defaults the layout changed handler.
+            </summary>
+            <param name="layoutName">Name of the layout.</param>
+            <param name="isSet">if set to <c>true</c> [is set].</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.LayoutName.DelLayoutHandler(System.String)">
+            <summary>
+            Dels the layout handler.
+            </summary>
+            <param name="layoutName">Name of the layout.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.GridLayout.ToolStripGridLayoutManagerButton.LayoutName.LayoutNameChangedHandler(System.String,System.String)">
+            <summary>
+            Layouts the name changed handler.
+            </summary>
+            <param name="layoutName">Name of the layout.</param>
+            <param name="layoutNewName">New name of the layout.</param>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.PersonalParam.AutoPanelCategory.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.PersonalParam.AutoPanelCategory.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.PersonalParam.AutoPanelCategory.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.PersonalParam.PersonalParamManager">
+            <summary>
+            个人参数管理
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.PersonalParam.PersonalParamManager.ConfigPersonalParam(System.String)">
+            <summary>
+            配置个人参数
+            </summary>
+            <param name="uiName">界面名称</param>
+            <returns>修改过的个人参数</returns>
+        </member>
+        <member name="F:Hundsun.Framework.BizControls.PersonalParam.PersonalParamView.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.PersonalParam.PersonalParamView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.PersonalParam.PersonalParamView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.PersonalParam.PersonalParamViewModel.GetControlType(System.String)">
+            <summary>
+            获取控件类型
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.PersonalParam.PersonalParamViewModel.SaveChange">
+            <summary>
+            保存改变过的值
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.PersonalParam.PersonalParamViewModel.InitControlNodeList">
+            <summary>
+            初始化控件节点列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.BizControls.PersonalParam.PersonalParamViewModel.CreateNode(Hundsun.Framework.Common.CacheEntity.BaseEntityTpersonalparam,Hundsun.Framework.BizControls.ControlManager.ControlNode)">
+            <summary>
+            生成控件节点值
+            </summary>
+            <param name="entity"></param>
+            <param name="parent"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.PersonalParam.PersonalParamViewModel.SavedValueList">
+            <summary>
+            以保存的值
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.add_hover">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.add_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.date_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.date_enter">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.date_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.delete_hover">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.delete_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.Down">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.downshrink">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.dropdown">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.dropup">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.MenuStripBG">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.openFile">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.openfolder">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.saveFile">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.setting">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.sys_add_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.sys_add_hover">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.sys_add_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.sys_del_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.sys_del_hover">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.sys_del_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.Up">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.update_hover">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.update_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Properties.Resources.upshrink">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.Skin.Default.LightBlueSkin">
+            <summary>
+            浅蓝色皮肤
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Skin.Default.LightBlueSkin.StyleDefaultList">
+            <summary>
+            控件类型皮肤
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.BizControls.Skin.Default.LightBlueSkin.hsButtonDefault">
+            <summary>
+            按钮默认皮肤
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.Skin.Default.LightBlueEditorSkin">
+            <summary>
+            输入框类型皮肤
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.Skin.Default.LightBlueLabelSkin">
+            <summary>
+            带Label类型皮肤
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.BizControls.Skin.Default.LightBlueButtonSkin">
+            <summary>
+            hsButton皮肤
+            </summary>
+        </member>
+    </members>
+</doc>
