@@ -1,0 +1,1365 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hundsun.Framework.Util</name>
+    </assembly>
+    <members>
+        <member name="M:Hundsun.Framework.Util.Encrypts.Encrypt.EncryptOperatorPassWord(System.String,System.String,System.Text.StringBuilder)">
+            <summary>
+            加密登录密码
+            </summary>
+            <param name="sOperatorNO">操作员ID</param>
+            <param name="sPassWord">明文密码</param>
+            <param name="sEncryptPassWord">密文密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Encrypts.Encrypt.O4Encrypt(System.String,System.String,System.Text.StringBuilder)">
+            <summary>
+            加密
+            </summary>
+            <param name="PassKey">密钥</param>
+            <param name="PassWord">明文</param>
+            <param name="EncryptPassWord">密文</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Encrypts.Encrypt.O4Decrypt(System.String,System.String,System.Text.StringBuilder)">
+            <summary>
+            解密
+            </summary>
+            <param name="PassKey">密钥</param>
+            <param name="PassWord">密文</param>
+            <param name="EncryptPassWord">明文</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Encrypts.Encrypt.EncryptAccountPassword(System.String,System.Text.StringBuilder@)">
+            <summary>
+            加密资金账户密码
+            </summary>
+            <param name="sPassWord">资金账户明文密码</param>
+            <param name="sEncryptPassWord">资金账户密文密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Encrypts.Encrypt.DecryptAccountPassword(System.String,System.Text.StringBuilder@)">
+            <summary>
+            解密资金账户密码
+            </summary>
+            <param name="sPassWord">资金账户明文密码</param>
+            <param name="sEncryptPassWord">资金账户密文密码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Hundsun.Framework.Util.CommonExtension">
+            <summary>
+            字符处理扩展方法
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CommonExtension.FindControl``1(System.Windows.Forms.Control,System.String)">
+            <summary>
+            查找子控件
+            </summary>
+            <typeparam name="T">子控件类型</typeparam>
+            <param name="parentControl">父控件</param>
+            <param name="name">子控件名称</param>
+            <returns>所有符合条件的子控件</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CommonExtension.NullSourceOrContains``1(System.Collections.Generic.IEnumerable{``0},``0)">
+            <summary>
+            数据源为空或包含当前值
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="src">数据源</param>
+            <param name="value">值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CommonExtension.Divisible(System.Int32,System.Double)">
+            <summary>
+            是否整除
+            </summary>
+            <param name="dividend">被除数</param>
+            <param name="divisor">除数</param>
+            <returns>是否整除</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CommonExtension.Divisible(System.Double,System.Double)">
+            <summary>
+            是否整除
+            </summary>
+            <param name="dividend">被除数</param>
+            <param name="divisor">除数</param>
+            <returns>是否整除</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CommonExtension.Divisible(System.Decimal,System.Decimal)">
+            <summary>
+            是否整除
+            </summary>
+            <param name="dividend">被除数</param>
+            <param name="divisor">除数</param>
+            <returns>是否整除</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CommonExtension.TryConvert(System.Object,System.Type,System.Object@)">
+            <summary>
+            转换为指定的类型
+            </summary>
+            <param name="src">源数据</param>
+            <param name="destinationType">目标类型</param>
+            <param name="value">目标值</param>
+            <returns>true：转化成功 false：转化失败</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Util.Extensions.ObjectExtension">
+            <summary>
+            对象转换扩展类
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Extensions.ObjectExtension.ToEntity``2(``0)">
+            <summary>
+            由源实体转换为目标实体
+            <para>考虑到效率，建议实体字段较少时使用</para>
+            </summary>
+            <typeparam name="TSource">源实体</typeparam>
+            <typeparam name="TEntity">目标实体</typeparam>
+            <param name="src">源实体</param>
+            <returns>返回目标实体</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Extensions.ObjectExtension.ToList``1(System.Data.DataTable)">
+            <summary>
+            DataTable 转换为List 集合
+            </summary>
+            <typeparam name="TEntity">类型</typeparam>
+            <param name="dt">DataTable</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Extensions.ObjectExtension.ToDataTable``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            转换为一个DataTable
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Hundsun.Framework.Util.Manager.GlobalManager">
+            <summary>
+            本地化帮助类
+            </summary>
+        </member>
+        <member name="F:Hundsun.Framework.Util.Manager.GlobalManager.DefaultLanguage">
+            <summary>
+            默认语言
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Manager.GlobalManager.GetCurrentLanguage">
+            <summary>
+            获取当前语言
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Manager.GlobalManager.SetCurrentUICulture">
+            <summary>
+            设置当前线程的区域性
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Manager.GlobalManager.SetUICulture(System.String)">
+            <summary>
+            设置资源管理器使用的当前区域性以便在运行时查找区域性特定的资源
+            </summary>
+            <param name="language">语言</param>
+        </member>
+        <member name="T:Hundsun.Framework.Util.Utilities.HardwareUtil">
+            <summary>
+            获取硬件设备信息工具类
+            包括当前IP、主机名、MAC等
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.HardwareUtil.GetHostName">
+            <summary>
+            获取计算机主机名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.HardwareUtil.GetMac">
+            <summary>
+            获取MAC地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.HardwareUtil.GetIpAddress">
+            <summary>
+            获取IP地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.HardwareUtil.GetHardDiskSerialNo">
+            <summary>
+            获取硬盘序号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Hundsun.Framework.Util.Utilities.JsonUtil">
+            <summary>
+            JSON工具类
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.JsonUtil.ObjectToJson``1(``0)">
+            <summary>
+            将目标对象转换为JSON字符串
+            </summary>
+            <typeparam name="T">目标类型</typeparam>
+            <param name="t"></param>
+            <returns>返回JSON字符串</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.JsonUtil.JsonToObject``1(System.String)">
+            <summary>
+            将JSON字符串转换为目标类型
+            </summary>
+            <typeparam name="T">目标类型</typeparam>
+            <param name="jsonText">JSON字符串</param>
+            <returns>返回目标类型</returns>
+        </member>
+        <member name="T:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil">
+            <summary>
+            O4 消息提示工具类
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowTips(System.String)">
+            <summary>
+            弹出提示消息 
+            </summary>
+            <param name="message">提示消息</param>
+            <returns/>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowTips(System.String,System.Windows.Forms.Form)">
+            <summary>
+            弹出提示消息 
+            </summary>
+            <param name="message">提示消息</param>
+            <param name="ownerForm">父窗体</param>
+            <returns/>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowTips(System.String,System.Action,System.Boolean,System.Windows.Forms.Form)">
+            <summary>
+            显示一般的提示信息 
+            </summary>
+            <param name="message">提示信息</param><param name="dialogShownAction">消息框显示后当窗体要消失的时候回触发该委托</param><param name="useMnemonic">获取或设置一个值，该值指示控件是否将控件的 System.Windows.Forms.Control.Text 属性中的“and”符 (&amp;) 解释为访问键前缀字符。</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowTipsYesNoCancel(System.String)">
+            <summary>
+            显示询问用户信息，并显示提示标志 
+            </summary>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowTipsYesNoCancel(System.String,System.Windows.Forms.Form)">
+            <summary>
+            显示询问用户信息，并显示提示标志
+            
+            </summary>
+            <param name="message">错误信息</param>
+            <param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowTipsYesNoCancel(System.String,HSUCF.Controls.FocusedButtonYesNoCancel,System.Windows.Forms.Form)">
+            <summary>
+            显示询问用户信息，并显示提示标志
+            
+            </summary>
+            <param name="message">错误信息</param>
+            <param name="yesNoCancel">默认要聚焦的按钮</param>
+            <param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowTipsYesNoCancel(System.String,System.Action,System.Boolean,HSUCF.Controls.FocusedButtonYesNoCancel,System.Windows.Forms.Form)">
+            <summary>
+            显示询问用户信息，并显示提示标志
+            
+            </summary>
+            <param name="message">错误信息</param><param name="dialogShownAction">消息框显示后当窗体要消失的时候回触发该委托</param><param name="useMnemonic">获取或设置一个值，该值指示控件是否将控件的 System.Windows.Forms.Control.Text 属性中的“and”符 (&amp;) 解释为访问键前缀字符。</param><param name="yesNoCancel">默认要聚焦的按钮</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowTipsYesNo(System.String)">
+            <summary>
+            显示询问用户信息，并显示提示标志
+            
+            </summary>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowTipsYesNo(System.String,System.Windows.Forms.Form)">
+            <summary>
+            显示询问用户信息，并显示提示标志
+            
+            </summary>
+            <param name="message">错误信息</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowTipsYesNo(System.String,HSUCF.Controls.FocusedButtonYesNo,System.Windows.Forms.Form)">
+            <summary>
+            显示询问用户信息，并显示提示标志
+            
+            </summary>
+            <param name="message">错误信息</param><param name="yesNo">默认要聚焦的按钮</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowTipsYesNo(System.String,System.Action,System.Boolean,HSUCF.Controls.FocusedButtonYesNo,System.Windows.Forms.Form)">
+            <summary>
+            显示询问用户信息，并显示提示标志
+            
+            </summary>
+            <param name="message">错误信息</param><param name="dialogShownAction">消息框显示后当窗体要消失的时候回触发该委托</param><param name="useMnemonic">获取或设置一个值，该值指示控件是否将控件的 System.Windows.Forms.Control.Text 属性中的“and”符 (&amp;) 解释为访问键前缀字符。</param><param name="yesNo">默认要聚焦的按钮</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowConfirmYesNo(System.String)">
+            <summary>
+            弹出普通确认框
+            
+            </summary>
+            <param name="message">确认消息</param>
+            <returns/>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowConfirmYesNo(System.String,System.Windows.Forms.Form)">
+            <summary>
+            显示一个YesNo选择对话框
+            
+            </summary>
+            <param name="prompt">对话框的选择内容提示信息</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+            <returns>
+            如果选择Yes则返回true，否则返回false
+            </returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowConfirmYesNo(System.String,HSUCF.Controls.FocusedButtonYesNo,System.Windows.Forms.Form)">
+            <summary>
+            显示一个YesNo选择对话框
+            
+            </summary>
+            <param name="prompt">对话框的选择内容提示信息</param><param name="yesNo">默认要聚焦的按钮</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+            <returns>
+            如果选择Yes则返回true，否则返回false
+            </returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowConfirmYesNo(System.String,System.Action,System.Boolean,HSUCF.Controls.FocusedButtonYesNo,System.Windows.Forms.Form)">
+            <summary>
+            显示一个YesNo选择对话框
+            
+            </summary>
+            <param name="prompt">对话框的选择内容提示信息</param><param name="dialogShownAction">消息框显示后当窗体要消失的时候回触发该委托</param><param name="useMnemonic">获取或设置一个值，该值指示控件是否将控件的 System.Windows.Forms.Control.Text 属性中的“and”符 (&amp;) 解释为访问键前缀字符。</param><param name="yesNo">默认要聚焦的按钮</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+            <returns>
+            如果选择Yes则返回true，否则返回false
+            </returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowConfirmYesNoCancel(System.String)">
+            <summary>
+            显示一个YesNoCancel选择对话框
+            
+            </summary>
+            <param name="prompt">对话框的选择内容提示信息</param>
+            <returns>
+            返回选择结果的的DialogResult值
+            </returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowConfirmYesNoCancel(System.String,System.Windows.Forms.Form)">
+            <summary>
+            显示一个YesNoCancel选择对话框
+            
+            </summary>
+            <param name="prompt">对话框的选择内容提示信息</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+            <returns>
+            返回选择结果的的DialogResult值
+            </returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowConfirmYesNoCancel(System.String,HSUCF.Controls.FocusedButtonYesNoCancel,System.Windows.Forms.Form)">
+            <summary>
+            显示一个YesNoCancel选择对话框
+            
+            </summary>
+            <param name="prompt">对话框的选择内容提示信息</param><param name="yesNoCancel">默认要聚焦的按钮</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+            <returns>
+            返回选择结果的的DialogResult值
+            </returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowConfirmYesNoCancel(System.String,System.Action,System.Boolean,HSUCF.Controls.FocusedButtonYesNoCancel,System.Windows.Forms.Form)">
+            <summary>
+            显示一个YesNoCancel选择对话框
+            
+            </summary>
+            <param name="prompt">对话框的选择内容提示信息</param><param name="dialogShownAction">消息框显示后当窗体要消失的时候回触发该委托</param><param name="useMnemonic">获取或设置一个值，该值指示控件是否将控件的 System.Windows.Forms.Control.Text 属性中的“and”符 (&amp;) 解释为访问键前缀字符。</param><param name="yesNoCancel">默认要聚焦的按钮</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+            <returns>
+            返回选择结果的的DialogResult值
+            </returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowWarning(System.String)">
+            <summary>
+            弹出警告消息
+            
+            </summary>
+            <param name="message">警告消息</param>
+            <returns/>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowWarning(System.String,System.Windows.Forms.Form)">
+            <summary>
+            显示警告信息
+            
+            </summary>
+            <param name="message">警告信息</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowWarning(System.String,System.Action,System.Boolean,System.Windows.Forms.Form)">
+            <summary>
+            显示警告信息
+            
+            </summary>
+            <param name="message">警告信息</param><param name="dialogShownAction">消息框显示后当窗体要消失的时候回触发该委托</param><param name="useMnemonic">获取或设置一个值，该值指示控件是否将控件的 System.Windows.Forms.Control.Text 属性中的“and”符 (&amp;) 解释为访问键前缀字符。</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowWarningYesNo(System.String)">
+            <summary>
+            以警告方式弹出确认消息
+            
+            </summary>
+            <param name="message">确认消息</param>
+            <returns/>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowWarningYesNo(System.String,System.Windows.Forms.Form)">
+            <summary>
+            显示询问用户信息，并显示警告标志
+            
+            </summary>
+            <param name="message">警告信息</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowWarningYesNo(System.String,HSUCF.Controls.FocusedButtonYesNo,System.Windows.Forms.Form)">
+            <summary>
+            显示询问用户信息，并显示警告标志
+            
+            </summary>
+            <param name="message">警告信息</param><param name="yesNo">默认要聚焦的按钮</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowWarningYesNo(System.String,System.Action,System.Boolean,HSUCF.Controls.FocusedButtonYesNo,System.Windows.Forms.Form)">
+            <summary>
+            显示询问用户信息，并显示警告标志
+            
+            </summary>
+            <param name="message">警告信息</param><param name="dialogShownAction">消息框显示后当窗体要消失的时候回触发该委托</param><param name="useMnemonic">获取或设置一个值，该值指示控件是否将控件的 System.Windows.Forms.Control.Text 属性中的“and”符 (&amp;) 解释为访问键前缀字符。</param><param name="yesNo">默认要聚焦的按钮</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowError(System.String)">
+            <summary>
+            弹出错误消息
+            
+            </summary>
+            <param name="message">错误消息</param>
+            <returns/>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowError(System.String,System.Windows.Forms.Form)">
+            <summary>
+            显示错误信息
+            
+            </summary>
+            <param name="message">错误信息</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowError(System.String,System.Action,System.Boolean,System.Windows.Forms.Form)">
+            <summary>
+            显示错误信息
+            
+            </summary>
+            <param name="message">错误信息</param><param name="dialogShownAction">消息框显示后当窗体要消失的时候回触发该委托</param><param name="useMnemonic">获取或设置一个值，该值指示控件是否将控件的 System.Windows.Forms.Control.Text 属性中的“and”符 (&amp;) 解释为访问键前缀字符。</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowErrorYesNo(System.String)">
+            <summary>
+            显示询问用户信息，并显示错误标志
+            
+            </summary>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowErrorYesNo(System.String,System.Windows.Forms.Form)">
+            <summary>
+            显示询问用户信息，并显示错误标志
+            
+            </summary>
+            <param name="message">错误信息</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowErrorYesNo(System.String,HSUCF.Controls.FocusedButtonYesNo,System.Windows.Forms.Form)">
+            <summary>
+            显示询问用户信息，并显示错误标志
+            
+            </summary>
+            <param name="message">错误信息</param><param name="yesNo">默认要聚焦的按钮</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.O4MsgBoxUtil.ShowErrorYesNo(System.String,System.Action,System.Boolean,HSUCF.Controls.FocusedButtonYesNo,System.Windows.Forms.Form)">
+            <summary>
+            显示询问用户信息，并显示错误标志
+            
+            </summary>
+            <param name="message">错误信息</param><param name="dialogShownAction">消息框显示后当窗体要消失的时候回触发该委托</param><param name="useMnemonic">获取或设置一个值，该值指示控件是否将控件的 System.Windows.Forms.Control.Text 属性中的“and”符 (&amp;) 解释为访问键前缀字符。</param><param name="yesNo">默认要聚焦的按钮</param><param name="ownerForm">父亲窗体，用于矫正多屏下消息窗体的显示位置问题</param>
+        </member>
+        <member name="T:Hundsun.Framework.Util.Utilities.RegexUtil">
+            <summary>
+            通用正则工具类
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.RegexUtil.CheckSql(System.String)">
+            <summary>
+            SQL注入检查
+            </summary>
+            <param name="input">输入文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.ValueConverter.TryConvert2``1(System.Object,``0)">
+            <summary>
+            值转换
+            </summary>
+            <typeparam name="T">目标类型</typeparam>
+            <param name="src">源</param>
+            <param name="defaultValue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.ValueConverter.Convert2(System.Object,System.Type)">
+            <summary>
+            值转换
+            </summary>
+            <param name="src">源</param>
+            <param name="desType">目标类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.ValueConverter.Convert2``1(System.Object)">
+            <summary>
+            值转换
+            </summary>
+            <typeparam name="T">目标类型</typeparam>
+            <param name="src">源</param>
+            <returns></returns>
+        </member>
+        <member name="T:Hundsun.Framework.Util.Utilities.DataTimeUtil">
+            <summary>
+            日期帮助类
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.DataTimeUtil.IsAIntDate(System.String)">
+            <summary>
+            是否是整型日期
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.DataTimeUtil.IntToDateTime(System.Int32)">
+            <summary>
+            转换成日期
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.DataTimeUtil.IntToTime(System.Int32)">
+            <summary>
+            6位数字转换成时间
+            </summary>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.DataTimeUtil.DateTimeToInt(System.DateTime)">
+            <summary>
+            将一个日期时间型的日期转换为一个整形的日期
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.DataTimeUtil.IncIntDate(System.Int32,System.Single)">
+            <summary>
+            将整型日期+ N(缺省1)得到新的整形日期
+            </summary>
+            <param name="i"></param>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.DataTimeUtil.DecIntDate(System.Int32,System.Single)">
+            <summary>
+            将整型日期- N(缺省1)得到新的整形日期
+            </summary>
+            <param name="i"></param>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.DataTimeUtil.ReplaceStrDate(System.String,System.Int32)">
+            <summary>
+            若字符串中有日期格式串，则替换为相应格式的日期
+            </summary>
+            <param name="s"></param>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.DataTimeUtil.ReplaceStrDate(System.String,System.DateTime)">
+            <summary>
+            若字符串中有日期格式串，则替换为相应格式的日期
+            </summary>
+            <param name="s"></param>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.DataTimeUtil.StrToIntNE(System.String)">
+            <summary>
+            将字符串转换为Int，当转换失败时，返回0，不抛出异常
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.DataTimeUtil.GetFormatedDate(System.String)">
+            <summary>
+            sDate如果不能转化为8位可转化为时间的整数，则直接返回sDate。如果可以转化则转化为yyyy-mm-dd格式的日期。
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.DataTimeUtil.GetFormatedTime(System.String)">
+            <summary>
+            sTime如果不能转化为6位可转化为时间的整数，则直接返回sTime。如果可以转化则转化为hh:mm:ss格式的时间。
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.DataTimeUtil.GetDateTime(System.String)">
+            <summary>
+            字符串转换为时间
+            </summary>
+            <param name="datetime"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Hundsun.Framework.Util.Utilities.NumberUtil">
+            <summary>
+            数字工具类
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.NumberUtil.TruncEx(System.Double)">
+            <summary>
+            该函数先将Value增加0.000001防止由于整数如28存储成27.9999999造成的误差
+            </summary>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.NumberUtil.RoundEx(System.Double,System.Int32)">
+            <summary>
+            浮点数四舍五入,若digit大于则表示对整数部分四舍五入.
+            解决Math.Round四舍六入五成双的银行家算法造成进位不准确
+            对小数部分舍入也可以使用Math.Round(1,1, MidpointRounding.AwayFromZero)
+            </summary>
+            <param name="d"></param>
+            <param name="digit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.NumberUtil.RoundEx(System.Double)">
+            <summary>
+            浮点数四舍五入
+            </summary>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.NumberUtil.FEqual(System.Double,System.Double)">
+            <summary>
+            判断浮点数d1是否等于浮点数d2
+            </summary>
+            <param name="d1"></param>
+            <param name="d2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.NumberUtil.FMoreThan(System.Double,System.Double)">
+            <summary>
+            判断浮点数d1是否大于浮点数d2
+            </summary>
+            <param name="d1"></param>
+            <param name="d2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.NumberUtil.FLessThan(System.Double,System.Double)">
+            <summary>
+            判断浮点数d1是否大于浮点数d2
+            </summary>
+            <param name="d1"></param>
+            <param name="d2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.NumberUtil.FMoreEqual(System.Double,System.Double)">
+            <summary>
+            判断浮点数d1是否大于等于浮点数d2
+            </summary>
+            <param name="d1"></param>
+            <param name="d2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.NumberUtil.FLessEqual(System.Double,System.Double)">
+            <summary>
+            判断浮点数d1是否小于等于浮点数d2
+            </summary>
+            <param name="d1"></param>
+            <param name="d2"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Hundsun.Framework.Util.Utilities.UiInvokeUtil">
+            <summary>
+            UI同步/异步委托类
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.UiInvokeUtil.SetSynchronizationContext(System.Threading.SynchronizationContext)">
+            <summary>
+            设置主线程的同步上下文
+            </summary>
+            <param name="uiSynchronizationContext">主线程的同步上下文</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.UiInvokeUtil.InvokeUI(System.Action)">
+            <summary>
+            主线程同步调用委托方法
+            </summary>
+            <param name="action"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.UiInvokeUtil.InvokeUI(System.Action{System.Object},System.Object)">
+            <summary>
+            主线程同步调用委托方法
+            </summary>
+            <param name="action"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.UiInvokeUtil.BeginInvokeUI(System.Action{System.Object},System.Object)">
+            <summary>
+            主线程异步调用委托方法
+            </summary>
+            <param name="action"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.UiInvokeUtil.BeginInvokeUI(System.Action)">
+            <summary>
+            主线程异步调用委托方法
+            </summary>
+            <param name="action"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.UiInvokeUtil.InvokeMethod(System.Action,System.Windows.Forms.Form,System.Boolean)">
+            <summary>
+            判断窗体是否创建句柄或未被释放，再进行异步或同步委托
+            </summary>
+            <param name="form">所属窗体</param>
+            <param name="action">方法</param>
+            <param name="isBeginInvoke">是否异步执行委托</param>
+        </member>
+        <member name="T:Hundsun.Framework.Util.DataTableConverter">
+            <summary>
+            Datatable和List互换类
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.DataTableConverter.TableToList``1(System.Data.DataTable)">
+            <summary>
+            DataTable转换成List
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.DataTableConverter.ToDataTable``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            生成DataTable
+            </summary>
+            <typeparam name="T">数据源类型</typeparam>
+            <param name="objList">数据源</param>
+            <param name="propertyColNameDict">属性和列名映射关系,NULL->用属性名做列名</param>
+            <returns></returns>
+        </member>
+        <member name="T:Hundsun.Framework.Util.CharacterHandler">
+            <summary>
+            字符处理扩展方法
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.SafeContains(System.String,System.String)">
+            <summary>
+            源字符串是否包含目标字符串，源字符串或目标字符串为空返回false
+            </summary>
+            <param name="src">源字符串</param>
+            <param name="value">目标字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.SafeStartsWith(System.String,System.String)">
+            <summary>
+            源字符串的开头是否与指定的字符串匹配，源字符串或目标字符串为空返回false
+            </summary>
+            <param name="src">源字符串</param>
+            <param name="value">指定的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.ToListOfInt(System.String)">
+            <summary>
+            以逗号分隔的字符串转化为int列表
+            </summary>
+            <param name="src">以逗号分隔的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.ToListOfInt(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            以逗号分隔的字符串转化为int列表
+            </summary>
+            <param name="src">以逗号分隔的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.ToListOfString(System.String)">
+            <summary>
+            以逗号分隔的字符串转化为string列表
+            </summary>
+            <param name="src">以逗号分隔的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.ToString``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            以逗号分隔的字符串
+            </summary>
+            <param name="srcList">string列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.ToDbStr(System.Boolean)">
+            <summary>
+            转化为数据库代表布尔值的字符串
+            </summary>
+            <param name="src">布尔值</param>
+            <returns>数据库代表布尔值的字符串</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.ToBoolean(System.String,System.Boolean)">
+            <summary>
+            转化为布尔值
+            </summary>
+            <param name="dbStr">数据库代表布尔值的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.IsValidDbBoolean(System.String)">
+            <summary>
+            是否为有效的数据库布尔值 0或者1
+            </summary>
+            <param name="dbStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.HowMany(System.String,System.String)">
+            <summary>
+            求Str中有多少SubStr子串
+            </summary>
+            <param name="str"></param>
+            <param name="substr"></param>
+            <example>HowMany("aaaaa", "aa")返回2</example>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.IsValidInt(System.String)">
+            <summary>
+            字符串是否是一个有效的整数
+            </summary>
+            <param name="src"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.IsValidDouble(System.String)">
+            <summary>
+            字符串是否一个有效的浮点数
+            </summary>
+            <param name="src"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.GetDecimalOrDefault(System.String,System.Decimal)">
+            <summary>
+            获取Decimal或默认值
+            </summary>
+            <param name="src"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.GetIntOrDefault(System.String,System.Int32)">
+            <summary>
+            获取整数或默认值
+            </summary>
+            <param name="src"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.RightStr(System.String,System.String)">
+            <summary>
+            字符串Source中在字符串Right右边的字符串
+            </summary>
+            <param name="source"></param>
+            <param name="posStr"></param>
+            <remarks>Right如多次出现，取第一次出现的位置，找不到返回空</remarks>
+            <example>GetStringRight('aasd(ABCDE)s34', '(') 返回'ABCDE)s34'</example>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.IsIpAndPort(System.String)">
+            <summary>
+            判断是否是包含ip和port的服务器地址
+            </summary>
+            <param name="server">包含ip和port的服务器地址</param>
+            <returns>成功返回true</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.IsIpv4Address(System.String)">
+            <summary>
+            判断是否合法IPv4地址
+            </summary>
+            <remarks>
+            cj，2013-9-13 11:01:07
+            </remarks>
+            <param name="ipAddress">ip地址, 如: 192.168.0.1</param>
+            <returns>合法返回true</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.IsIpPort(System.String)">
+            <summary>
+            判断某一字符串是否为合法的ip端口
+            合法端口号: 0~65535
+            </summary>
+            <remarks>
+            cj，2013-9-13 11:01:07
+            </remarks>
+            <param name="port">字符串描述的端口号</param>
+            <returns>合法返回true，否则返回false</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.CharacterHandler.Cut(System.String,System.Int32,System.String)">
+            <summary>
+            字符串截断
+            </summary>
+            <param name="src">源字符串</param>
+            <param name="maxLen">目标字符串的总长度(汉字占两格)</param>
+            <param name="attachStr">当源字符串的长度大于总长度时，进行截断，截断后附加的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="T:Hundsun.Framework.Util.Utilities.FormUtil">
+            <summary>
+            窗体帮助类
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.FormUtil.GetMainForm">
+            <summary>
+            获取主窗体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.FormUtil.GetMainFormHanlde">
+            <summary>
+            获取主窗体句柄
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.FormUtil.RestartClient">
+            <summary>
+            重启客户端
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Util.Utilities.FormUtil.MainForm">
+            <summary>
+            主窗体
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Util.Utilities.FormUtil.MainFormHandle">
+            <summary>
+            主窗体句柄
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.ScreenUtil.Save">
+            <summary>
+            使用默认路径和文件名保存
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.ScreenUtil.Save(System.String,System.String)">
+            <summary>
+            使用指定路径和文件名保存
+            </summary>
+            <param name="dirPath"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="T:Hundsun.Framework.Util.Utilities.XmlUtil">
+            <summary>
+            xml工具类
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.XmlUtil.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="fileName">文件路径</param>
+            <param name="rootName">根节点名称</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.XmlUtil.Save">
+            <summary>
+            保存文档
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.XmlUtil.TryGetValue``1(System.String,``0)">
+            <summary>
+            获取值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="cfgName"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.XmlUtil.GetNode(System.Xml.XmlNode,System.String)">
+            <summary>
+            获取节点
+            </summary>
+            <param name="parent">父节点</param>
+            <param name="name">名称</param>
+            <returns>节点</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.XmlUtil.AppendNode(System.String,System.String)">
+            <summary>
+            添加一个节点到指定节点末尾 
+            </summary>
+            <param name="name">节点名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.XmlUtil.AppendNode(System.Xml.XmlNode,System.String,System.String)">
+            <summary>
+            添加一个节点到指定节点末尾 
+            </summary>
+            <param name="parent">父节点</param>
+            <param name="name">节点名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.XmlUtil.AppendAttribute(System.Xml.XmlNode,System.String,System.String)">
+            <summary>
+            添加一个属性到指定节点
+            </summary>
+            <param name="parent">父节点</param>
+            <param name="attrName">属性名称</param>
+            <param name="attrValue">属性值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.Utilities.XmlUtil.Remove(System.String)">
+            <summary>
+            删除节点
+            </summary>
+            <param name="name">节点名称</param>
+        </member>
+        <member name="P:Hundsun.Framework.Util.Utilities.XmlUtil.Document">
+            <summary>
+            XML文档
+            </summary>
+        </member>
+        <member name="P:Hundsun.Framework.Util.Utilities.XmlUtil.Root">
+            <summary>
+            获取根节点
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Util.WinApi.Win32Const">
+            <summary>
+            WIN32消息以及常用常量 
+            </summary>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.SendMessage(System.IntPtr,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            同步发送windows消息
+            </summary>
+            <param name="hwnd">信息发往的窗口的句柄</param>
+            <param name="wMsg">消息ID</param>
+            <param name="wParam">参数1</param>
+            <param name="lParam">参数2</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.PostMessage(System.IntPtr,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            异步发送windows消息
+            </summary>
+            <param name="hWnd">信息发往的窗口的句柄</param>
+            <param name="Msg">消息ID</param>
+            <param name="wParam">参数1</param>
+            <param name="lParam">参数2</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.LoadLibrary(System.String)">
+            <summary>
+            加载库
+            </summary>
+            <param name="lpFileName">文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.GetProcAddress(System.IntPtr,System.String)">
+            <summary>
+            检索指定的动态链接库(DLL)中的输出库函数地址
+            </summary>
+            <param name="hModule"></param>
+            <param name="lpProceName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.FreeLibrary(System.IntPtr)">
+            <summary>
+            释放动态库
+            </summary>
+            <param name="hModule">动态库句柄</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.ReleaseCapture">
+            <summary>
+            该函数从当前线程中的窗口释放鼠标捕获，并恢复通常的鼠标输入处理
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.SetParent(System.IntPtr,System.IntPtr)">
+            <summary>
+            设置父窗体
+            </summary>
+            <param name="hWndChild">子窗体句柄</param>
+            <param name="hWndNewParent">父窗体句柄</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.GetWindowLong(System.IntPtr,System.Int32)">
+            <summary>
+            获得指定窗口的有关信息，函数也获得在额外窗口内存中指定偏移位地址的32位度整型值
+            </summary>
+            <param name="hwnd">目标窗口的句柄</param>
+            <param name="nIndex">需要获得的相关信息的类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.SetWindowLong(System.IntPtr,System.Int32,System.Int32)">
+            <summary>
+            设置窗体有关信息
+            </summary>
+            <param name="hwnd"></param>
+            <param name="nIndex"></param>
+            <param name="dwNewLong"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.SetWindowPos(System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置窗体位置
+            </summary>
+            <param name="hwnd"></param>
+            <param name="hWndInsertAfter"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="cx"></param>
+            <param name="cy"></param>
+            <param name="wFlags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.MoveWindow(System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            移动窗体 
+            </summary>
+            <param name="hwnd"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="cx"></param>
+            <param name="cy"></param>
+            <param name="repaint"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.ShowWindow(System.IntPtr,System.UInt32)">
+            <summary>
+            显示窗体
+            </summary>
+            <param name="hWnd"></param>
+            <param name="nCmdShow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.SetClassLong(System.IntPtr,System.Int32,System.Int32)">
+            <summary>
+            设置窗口类属性
+            </summary>
+            <param name="hwnd"></param>
+            <param name="nIndex"></param>
+            <param name="dwNewLong"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.GetClassLong(System.IntPtr,System.Int32)">
+            <summary>
+            读取窗口类属性
+            </summary>
+            <param name="hwnd"></param>
+            <param name="nIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.FindWindow(System.String,System.String)">
+            <summary>
+            查找窗体
+            </summary>
+            <param name="lpClassName">窗体类名</param>
+            <param name="lpWindowName">窗体名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.FindWindowEx(System.IntPtr,System.UInt32,System.String,System.String)">
+            <summary>
+            在窗口列表中寻找与指定条件相符的第一个子窗口
+            </summary>
+            <param name="hwndParent">父窗口句柄，如果hwndParent为 0 ，则函数以桌面窗口为父窗口，查找桌面窗口的所有子窗口。</param>
+            <param name="hwndChildAfter">子窗口句柄，查找从在Z序中的下一个子窗口开始。子窗口必须为hwndParent窗口的直接子窗口而非后代窗口。如果HwndChildAfter为NULL，查找从hwndParent的第一个子窗口开始。如果hwndParent 和 hwndChildAfter同时为NULL，则函数查找所有的顶层窗口及消息窗口。</param>
+            <param name="lpszClass">控件类名</param>
+            <param name="lpszWindow">控件标题，如果该参数为 NULL，则为所有窗口全匹配。</param>
+            <returns>控件句柄</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.EnumChildWindows(System.IntPtr,Hundsun.Framework.Util.WinApi.WinApiUtility.CallBack,System.Int32)">
+            <summary>
+            枚举一个父窗口的所有子窗口。
+            </summary>
+            <param name="hWndParent">父窗口句柄</param>
+            <param name="lpfn">回调函数的地址</param>
+            <param name="lParam">自定义的参数</param>
+            <remarks>注意：回调函数的返回值将会影响到这个API函数的行为。如果回调函数返回true，则枚举继续直到枚举完成；如果返回false，则将会中止枚举。 其中CallBack是这样的一个委托：public delegate bool CallBack(IntPtr hwnd, int lParam); 如果 CallBack 返回的是true，则会继续枚举，否则就会终止枚举。</remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.GetForegroundWindow">
+            <summary>
+            获得本窗体的句柄
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.SetForegroundWindow(System.IntPtr)">
+            <summary>
+            设置此窗体为活动窗体
+            </summary>
+            <param name="hWnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.RegisterHotKey(System.IntPtr,System.Int32,Hundsun.Framework.Util.WinApi.WinApiUtility.KeyModifiers,System.Windows.Forms.Keys)">
+            <summary>
+            注册热键
+            如果函数执行成功，返回值不为0。 
+            如果函数执行失败，返回值为0。要得到扩展错误信息，调用GetLastError。 
+            </summary>
+            <param name="hWnd">要定义热键的窗口的句柄 </param>
+            <param name="id">定义热键ID（不能与其它ID重复） </param>
+            <param name="fsModifiers">标识热键是否在按Alt、Ctrl、Shift、Windows等键时才会生效 </param>
+            <param name="vk">定义热键的内容 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.UnregisterHotKey(System.IntPtr,System.Int32)">
+            <summary>
+            取消热键注册
+            </summary>
+            <param name="hWnd">要取消热键的窗口的句柄 </param>
+            <param name="id">要取消热键的ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.GetLastInputInfo(Hundsun.Framework.Util.WinApi.WinApiUtility.LASTINPUTINFO@)">
+            <summary>
+            获取上次输入操作的时间
+            </summary>
+            <param name="plii"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.SetProcessWorkingSetSize(System.IntPtr,System.Int32,System.Int32)">
+            <summary>
+            设置操作系统实际划分给进程使用的内存容量 
+            </summary>
+            <param name="process"></param>
+            <param name="minSize"></param>
+            <param name="maxSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.SwitchToThisWindow(System.IntPtr,System.Boolean)">
+            <summary>
+            将焦点切换指定的窗口，并将其带到前台。
+            </summary>
+            <param name="hWnd">要切换到的窗口的句柄。</param>
+            <param name="fAltTab">TRUE 表示使用 Alt/Ctl+Tab 键的先后次序来切换窗口，否则设为 FALSE。</param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.SetActiveWindow(System.IntPtr)">
+            <summary>
+            该函数激活一个窗口。该窗口必须与调用线程的消息队列相关联。
+            </summary>
+            <param name="hWnd">将被激活的最顶层窗口。</param>
+            <returns>若函数调用成功，则返回原先活动窗口的句柄。若函数调用失败，则返回值为NULL</returns>
+            <remarks>SetActiveWindow函数激活一个窗口，但当应用程序处于后台时，将不激活指定窗口。当应用程序激活窗口时处于前台，则窗口将被放到前台。</remarks>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.ShowWindowAsync(System.IntPtr,System.Int32)">
+            <summary>
+            该函数设置由不同线程产生的窗口的显示状态。
+            </summary>
+            <param name="hWnd">窗口句柄</param>
+            <param name="nCmdShow">指定窗口如何显示。查看允许值列表，请查阅ShowWlndow函数的说明部分</param>
+            <returns>如果函数原来可见，返回值为非零；如果函数原来被隐藏，返回值为零。</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.IsIconic(System.IntPtr)">
+            <summary>
+            该函数确定给定窗口是否是最小化（图标化）的窗口
+            </summary>
+            <param name="hWnd">窗口句柄</param>
+            <returns>如果窗口未最小化，返回值为零；如果窗口已最小化，返回值为非零。</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.IsZoomed(System.IntPtr)">
+            <summary>
+            确定窗口是否是最大化的窗口的一种函数。
+            </summary>
+            <param name="hWnd">被测试窗口的句柄</param>
+            <returns>如果窗口已最大化，则返回值为非零；如果窗口未最大化，则返回值为零。</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.GetWindowThreadProcessId(System.IntPtr,System.IntPtr)">
+            <summary>
+            获得窗口所属进程ID和线程ID，从而判断创建窗口的进程和线程。
+            </summary>
+            <param name="hWnd">传入的窗口句柄</param>
+            <param name="processId">返回的进程ID地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.AttachThreadInput(System.IntPtr,System.IntPtr,System.Int32)">
+            <summary>
+            将一个线程的输入处理机制贴附到另一个线程
+            </summary>
+            <param name="idAttach">指定要连接到另外一个线程的线程。该线程不能是系统线程。</param>
+            <param name="idAttachTo">要连接其他线程的线程，该线程不能是系统线程。且线程不能自己连接到自己。</param>
+            <param name="fAttach">为TRUE：连接； 为FALSE: 释放连接</param>
+            <returns>如果调用成功则返回非零值。</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.GetCurrentThreadId">
+            <summary>
+            获取当前线程一个唯一的线程标识符 
+            </summary>
+            <returns>当前的线程标识符 </returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.MiniDumpWriteDump(System.IntPtr,System.Int32,System.IntPtr,Hundsun.Framework.Util.WinApi.WinApiUtility.MiniDumpType,Hundsun.Framework.Util.WinApi.WinApiUtility.MiniDumpExceptionInfo@,System.IntPtr,System.IntPtr)">
+            <summary>
+            生成DUMP文件
+            <para>参考https://msdn.microsoft.com/en-us/library/windows/desktop/ms680360%28v=vs.85%29.aspx</para>
+            </summary>
+            <param name="hProcess">当前进程句柄</param>
+            <param name="processId">当前进程ID</param>
+            <param name="fileHandle">数据流句柄</param>
+            <param name="dumpType">dump类型</param>
+            <param name="excepInfo">异常信息</param>
+            <param name="userInfo">用户信息</param>
+            <param name="extInfo">其他信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.SetUnhandledExceptionFilter(Hundsun.Framework.Util.WinApi.WinApiUtility.ExceptionCallBack)">
+            <summary>
+            设置异常捕获函数
+            </summary>
+            <param name="cb">异常回调函数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.ActiveWindow(System.IntPtr)">
+            <summary>
+            激活指定窗口
+            </summary>
+            <param name="hWnd">窗口句柄</param> 
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.SetTop(System.IntPtr)">
+            <summary>
+            置顶窗口
+            </summary>
+            <param name="hWnd"></param>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.FindWindowEx(System.IntPtr,System.String,System.Boolean)">
+            <summary>
+            查找窗体上控件句柄
+            </summary>
+            <param name="hwnd">父窗体句柄</param>
+            <param name="lpszWindow">控件标题(Text)</param>
+            <param name="bChild">设定是否在子窗体中查找</param>
+            <returns>控件句柄，没找到返回IntPtr.Zero</returns>
+        </member>
+        <member name="M:Hundsun.Framework.Util.WinApi.WinApiUtility.WriteDump(System.String,Hundsun.Framework.Util.WinApi.WinApiUtility.MiniDumpType)">
+            <summary>
+            生成Dump文件
+            </summary>
+            <param name="dmpFileName">文件名</param>
+            <param name="dumpType">dump类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:Hundsun.Framework.Util.WinApi.WinApiUtility.CallBack">
+            <summary>
+            对应EnumChildWindows中回调函数
+            </summary>
+            <param name="hWnd"></param>
+            <param name="lParam"></param>
+        </member>
+        <member name="T:Hundsun.Framework.Util.WinApi.WinApiUtility.ExceptionCallBack">
+            <summary>
+            异常回调函数
+            <para>
+            EXCEPTION_EXECUTE_HANDLER == 1 表示已经处理了异常;
+            EXCEPTION_CONTINUE_SEARCH == 0 表示不处理;
+            EXCEPTION_CONTINUE_EXECUTION e== -1 表示错误已经被修复
+            </para>
+            </summary>
+            <param name="val">返回值</param>
+            <returns></returns>
+        </member>
+        <member name="T:Hundsun.Framework.Util.WinApi.WinApiUtility.ExceptionEnum">
+            <summary>
+            异常处理枚举
+            </summary>
+        </member>
+        <member name="T:Hundsun.Framework.Util.WinApi.WinApiUtility.MiniDumpType">
+            <summary>
+            参考https://msdn.microsoft.com/en-us/library/windows/desktop/ms680519%28v=vs.85%29.aspx
+            </summary>
+        </member>
+    </members>
+</doc>

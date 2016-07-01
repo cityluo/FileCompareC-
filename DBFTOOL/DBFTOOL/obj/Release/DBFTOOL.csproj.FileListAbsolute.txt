@@ -1,0 +1,40 @@
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\bin\Release\DBFTOOL.exe.config
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\bin\Release\DBFTOOL.exe
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\bin\Release\DBFTOOL.pdb
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\bin\Release\HSUCF.Controls.dll
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\bin\Release\HSUCF.Controls.Helper.dll
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\bin\Release\Hundsun.Framework.BizControls.dll
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\bin\Release\Hundsun.Framework.O4HSControls.dll
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\bin\Release\Hundsun.Framework.Common.dll
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\bin\Release\Hundsun.Framework.CacheService.dll
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\bin\Release\Hundsun.Framework.Util.dll
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\bin\Release\Hundsun.Framework.BackupService.dll
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\bin\Release\HSUCF.Controls.xml
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\bin\Release\HSUCF.Controls.Helper.xml
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\bin\Release\Hundsun.Framework.BizControls.xml
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\bin\Release\Hundsun.Framework.Common.xml
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\bin\Release\Hundsun.Framework.Util.xml
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\obj\Release\DBFTOOL.csprojResolveAssemblyReference.cache
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\obj\Release\DBFTOOL.DBFCompare.resources
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\obj\Release\DBFTOOL.Properties.Resources.resources
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\obj\Release\DBFTOOL.csproj.GenerateResource.Cache
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\obj\Release\DBFTOOL.exe
+C:\Users\yangzq13148\Documents\Visual Studio 2013\Projects\DBFTOOL\DBFTOOL\obj\Release\DBFTOOL.pdb
+G:\github\FileCompareC#\DBFTOOL\DBFTOOL\bin\Release\DBFTOOL.exe.config
+G:\github\FileCompareC#\DBFTOOL\DBFTOOL\obj\Release\DBFTOOL.exe
+G:\github\FileCompareC#\DBFTOOL\DBFTOOL\obj\Release\DBFTOOL.pdb
+G:\github\FileCompareC#\DBFTOOL\DBFTOOL\bin\Release\DBFTOOL.exe
+G:\github\FileCompareC#\DBFTOOL\DBFTOOL\bin\Release\DBFTOOL.pdb
+G:\github\FileCompareC#\DBFTOOL\DBFTOOL\bin\Release\Hundsun.Framework.Common.dll
+G:\github\FileCompareC#\DBFTOOL\DBFTOOL\bin\Release\Hundsun.Framework.CacheService.dll
+G:\github\FileCompareC#\DBFTOOL\DBFTOOL\bin\Release\Hundsun.Framework.Util.dll
+G:\github\FileCompareC#\DBFTOOL\DBFTOOL\bin\Release\Hundsun.Framework.BackupService.dll
+G:\github\FileCompareC#\DBFTOOL\DBFTOOL\bin\Release\HSUCF.Controls.xml
+G:\github\FileCompareC#\DBFTOOL\DBFTOOL\bin\Release\HSUCF.Controls.Helper.xml
+G:\github\FileCompareC#\DBFTOOL\DBFTOOL\bin\Release\Hundsun.Framework.BizControls.xml
+G:\github\FileCompareC#\DBFTOOL\DBFTOOL\bin\Release\Hundsun.Framework.Common.xml
+G:\github\FileCompareC#\DBFTOOL\DBFTOOL\bin\Release\Hundsun.Framework.Util.xml
+G:\github\FileCompareC#\DBFTOOL\DBFTOOL\obj\Release\DBFTOOL.csprojResolveAssemblyReference.cache
+G:\github\FileCompareC#\DBFTOOL\DBFTOOL\obj\Release\DBFTOOL.DBFCompare.resources
+G:\github\FileCompareC#\DBFTOOL\DBFTOOL\obj\Release\DBFTOOL.Properties.Resources.resources
+G:\github\FileCompareC#\DBFTOOL\DBFTOOL\obj\Release\DBFTOOL.csproj.GenerateResource.Cache
